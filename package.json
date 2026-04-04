@@ -1,0 +1,9 @@
+{
+  "name": "dahlquist-domain-pages",
+  "version": "1.0.0",
+  "description": "Static landing pages for Dahlquist domain portfolio",
+  "scripts": {
+    "serve": "npx serve . -p 3000 --no-clipboard",
+    "dev": "npx live-server --port=3000 --no-browser"
+  }
+}
