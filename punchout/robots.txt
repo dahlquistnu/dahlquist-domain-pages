@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://punchout.nu/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
