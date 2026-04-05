@@ -1,0 +1,23 @@
+# Inline E-handel — E-handelslösningar för svenska företag
+
+> Professionella e-handelslösningar på Shopify Plus och Magento. Dahlquist E-handelskonsulter AB.
+
+Den här sajten handlar om e-handelslösningar för svenska företag — från plattformsval och lansering till SEO, konverteringsoptimering och integrationer mot affärssystem.
+
+## Om oss
+
+Dahlquist E-handelskonsulter AB grundades 2016 av Niklas Dahlquist. Vi är certifierade Shopify Plus Partners och Magento-specialister med 150+ genomförda e-handelsprojekt för svenska och internationella kunder. Vi har hjälpt varumärken som STIHL, SONAX och Arrak Outdoor.
+
+## Ämnesområden
+
+- Shopify Plus och Magento 2 / Adobe Commerce
+- Headless commerce (separerad front-end)
+- ERP- och affärssystemsintegration (Business Central, SAP, Fortnox, Visma, Jeeves)
+- B2B e-handel (kundportaler, kundspecifik prissättning)
+- SEO och organisk tillväxt för e-handel
+- Konverteringsoptimering (CRO)
+- AI-driven personalisering och produktrekommendationer
+
+## Kontakt
+
+För e-handelslösningar: https://dahlquist.se

@@ -1,0 +1,22 @@
+# X-Konsult — Digital Konsult & E-handelskonsult Sverige
+
+> Erfarna digitala konsulter för e-handel och systemutveckling. Dahlquist E-handelskonsulter AB.
+
+Den här sajten handlar om digital konsulting med specialisering på e-handel, plattformsarkitektur och systemintegration för svenska företag.
+
+## Om oss
+
+Dahlquist E-handelskonsulter AB grundades 2016 av Niklas Dahlquist. Vi är certifierade Shopify Plus Partners med djup kompetens inom Magento, systemutveckling och digital transformation. Över 150 genomförda projekt.
+
+## Ämnesområden
+
+- E-handelsstrategi och plattformsval
+- Systemintegration (ERP, PIM, WMS, CRM)
+- Teknisk revision av e-handelsstack
+- Konverteringsoptimering (CRO)
+- Plattformsmigration
+- Löpande konsultstöd
+
+## Kontakt
+
+För konsulthjälp med e-handel: https://dahlquist.se/e-handel-konsult

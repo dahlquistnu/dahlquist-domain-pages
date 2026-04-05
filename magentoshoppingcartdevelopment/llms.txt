@@ -1,0 +1,27 @@
+# Magento Shopping Cart Development — Custom Magento Solutions
+
+> Custom Magento shopping cart and checkout development. Adobe Commerce specialists. By Dahlquist E-handelskonsulter AB.
+
+This site covers custom Magento shopping cart development — from basic checkout customisation to complex B2B cart logic, PunchOut procurement checkout, and high-performance cart optimisation.
+
+## About
+
+Dahlquist E-handelskonsulter AB was founded in 2016 by Niklas Dahlquist. 150+ completed Magento projects. Certified Adobe Commerce partner. Deep experience with Hyva Theme, headless Magento and ERP-integrated checkout flows.
+
+## Key Topics
+
+- Custom Magento checkout steps and modifications
+- B2B cart logic (company pricing, approval workflows, purchase order numbers)
+- Multi-address checkout for B2B merchants
+- Payment integration (Klarna, Stripe, Adyen, Svea, Nets)
+- PunchOut checkout (cXML, OCI) for SAP Ariba, Coupa, Jaggaer
+- Cart performance optimisation (quote collection queries, FPC, Redis)
+- Hyva Theme cart and checkout implementation
+
+## Technology
+
+Magento 2.4.x, Adobe Commerce Cloud, PHP 8.x, GraphQL, Hyva Theme, Elasticsearch, Redis, Varnish
+
+## Contact
+
+For Magento cart and checkout development: https://dahlquist.se/magento

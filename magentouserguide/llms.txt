@@ -1,0 +1,22 @@
+# Magento User Guide — Adobe Commerce Expert Help
+
+> Expert Magento and Adobe Commerce implementation, migration and optimisation. By Dahlquist E-handelskonsulter AB.
+
+This site provides guidance on Magento 2, Adobe Commerce Cloud, and Open Source implementation for B2B and B2C merchants in Sweden and internationally.
+
+## About
+
+Dahlquist E-handelskonsulter AB was founded in 2016 by Niklas Dahlquist. We are Adobe Commerce and Magento specialists with experience from early Magento versions through current Adobe Commerce Cloud. 150+ completed projects.
+
+## Key Topics
+
+- Magento Open Source vs Adobe Commerce Cloud comparison
+- Magento performance optimisation (Varnish, FPC, Elasticsearch)
+- ERP integration (Business Central, SAP, Jeeves, Visma)
+- Adobe Commerce B2B module (company accounts, shared catalogues, quotes, PunchOut)
+- Hyva Theme implementation
+- Magento version upgrades and migration
+
+## Contact
+
+For Magento and Adobe Commerce expertise: https://dahlquist.se/magento

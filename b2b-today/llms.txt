@@ -1,0 +1,21 @@
+# B2B Today — B2B E-Commerce Strategy & Implementation
+
+> B2B e-commerce insights and implementation by Dahlquist E-handelskonsulter AB.
+
+This site covers B2B e-commerce strategy, platform selection (Shopify Plus B2B, Adobe Commerce), ERP integration, procurement connectivity (PunchOut/cXML/OCI), and digital transformation for B2B merchants in Sweden and internationally.
+
+## About
+
+Dahlquist E-handelskonsulter AB was founded in 2016 by Niklas Dahlquist. We are certified Shopify Plus Partners and Adobe Commerce specialists with 150+ completed B2B and B2C e-commerce projects.
+
+## Key Topics
+
+- B2B e-commerce platform selection (Shopify Plus vs Magento/Adobe Commerce)
+- ERP integration (Business Central, SAP, Jeeves, Fortnox, Visma)
+- PunchOut checkout (cXML, OCI) for SAP Ariba, Coupa, Jaggaer
+- Customer-specific pricing, company accounts, approval workflows
+- Headless B2B commerce (React/Next.js storefronts)
+
+## Contact
+
+For B2B e-commerce consultancy: https://dahlquist.se/b2b-ehandel
