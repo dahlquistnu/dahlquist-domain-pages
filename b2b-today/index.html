@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B2B E-Commerce Today – Trends, Platforms & Strategy | Dahlquist</title>
-  <meta name="description" content="B2B e-commerce insights and implementation. Dahlquist delivers B2B e-commerce solutions on Shopify Plus and Magento – procurement integrations, customer portals and ERP connections." />
+  <title>B2B E-Commerce Today – Platforms, Strategy & Implementation | Dahlquist</title>
+  <meta name="description" content="B2B e-commerce insights and implementation. Dahlquist delivers B2B e-commerce on Shopify Plus and Magento – procurement integrations, customer portals, ERP connections and PunchOut checkout." />
   <link rel="canonical" href="https://b2b-today.com/" />
   <meta property="og:title" content="B2B E-Commerce Today – Dahlquist" />
-  <meta property="og:description" content="Expert B2B e-commerce implementation. Shopify Plus and Magento B2B solutions with procurement system integration, customer-specific pricing and ERP connectivity." />
+  <meta property="og:description" content="Expert B2B e-commerce implementation. Shopify Plus and Magento B2B with procurement integration, customer-specific pricing and ERP connectivity." />
   <meta property="og:url" content="https://b2b-today.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
@@ -16,8 +16,8 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="Dahlquist E-Commerce Consultants" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="B2B E-Commerce Today – Trends, Platforms & Strategy | Dahlquist" />
-  <meta name="twitter:description" content="B2B e-commerce insights and implementation. Dahlquist delivers B2B solutions on Shopify Plus and Magento." />
+  <meta name="twitter:title" content="B2B E-Commerce Today – Platforms, Strategy & Implementation | Dahlquist" />
+  <meta name="twitter:description" content="B2B e-commerce strategy and implementation. Shopify Plus and Magento B2B solutions by Dahlquist." />
   <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
   <meta name="author" content="Dahlquist E-handelskonsulter AB" />
   <meta name="robots" content="index, follow" />
@@ -39,9 +39,42 @@
     "sameAs": ["https://dahlquist.se/b2b-ehandel"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between B2B and B2C e-commerce?",
+        "acceptedAnswer": {"@type": "Answer", "text": "B2B e-commerce handles transactions between businesses, which means complex requirements like customer-specific pricing, company accounts with multiple buyers, purchase order numbers, credit terms (net 30/60/90), approval workflows, and integration with procurement systems. B2C sells directly to individual consumers with fixed pricing and simpler checkout flows. The technical and business complexity of B2B is significantly higher."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which platform is best for B2B e-commerce – Shopify Plus or Magento?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Shopify Plus B2B is ideal for manufacturers and distributors who want fast time-to-market, lower maintenance overhead and a native B2B feature set (company accounts, custom catalogs, payment terms). Magento/Adobe Commerce B2B suits more complex operations requiring deep customization, PunchOut procurement integration (SAP Ariba, Coupa), complex product configurators, or very large SKU catalogs. The right choice depends on your transaction volume, integration complexity and internal IT capacity."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is PunchOut checkout and does my B2B store need it?",
+        "acceptedAnswer": {"@type": "Answer", "text": "PunchOut checkout (cXML or OCI protocol) allows a buyer to launch your webshop from inside their procurement system (SAP Ariba, Coupa, Jaggaer, Basware), add items to a cart, and return the cart data to their system for approval before a purchase order is issued. You need PunchOut if you are selling to large enterprises or public sector organizations that mandate procurement system compliance. Without it, you will lose those contracts to competitors who support it."}
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a B2B e-commerce implementation take?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A standard B2B webshop on Shopify Plus with ERP integration typically takes 3–5 months from kickoff to launch. A more complex Magento B2B implementation with PunchOut, custom pricing logic and multi-store setup can take 6–12 months. The primary variable is integration complexity – connecting to an ERP system like SAP or Business Central requires careful data mapping, testing and change management that cannot be rushed."}
+      },
+      {
+        "@type": "Question",
+        "name": "What ERP systems can be integrated with a B2B e-commerce platform?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The most common ERP integrations in Sweden and Scandinavia are Microsoft Dynamics 365 Business Central, SAP S/4HANA and SAP Business One, Jeeves, Visma Business, Fortnox and Monitor G5. The integration approach – direct API, iPaaS middleware (like Boomi, MuleSoft or Make) or custom connector – depends on the ERP system's API capabilities and the data volume involved."}
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.65; }
+    body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; }
     a { color: #1a3a5c; text-decoration: none; } a:hover { text-decoration: underline; }
     .header { background: #1a3a5c; color: #fff; padding: 1rem 2rem; }
     .header h1 { font-size: 1.1rem; font-weight: 600; }
@@ -50,112 +83,235 @@
     .hero p { font-size: 1.2rem; color: #444; max-width: 700px; margin: 0 auto 2rem; }
     .cta-btn { display: inline-block; background: #1a3a5c; color: #fff; padding: 1rem 2.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; }
     .cta-btn:hover { background: #0f2438; text-decoration: none; }
+    .stat-row { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2.5rem; }
+    .stat { background: #fff; border-radius: 8px; padding: 1.25rem 2rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .stat .num { font-size: 2.2rem; font-weight: 800; color: #1a3a5c; }
+    .stat .label { font-size: 0.85rem; color: #666; margin-top: 0.25rem; max-width: 160px; }
     .main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .section { margin-bottom: 3rem; }
-    .section h3 { font-size: 1.5rem; font-weight: 700; color: #1a3a5c; margin-bottom: 1rem; border-left: 4px solid #1a3a5c; padding-left: 0.75rem; }
-    .section p { color: #444; margin-bottom: 0.75rem; }
+    .section { margin-bottom: 3.5rem; }
+    .section h3 { font-size: 1.55rem; font-weight: 700; color: #1a3a5c; margin-bottom: 1rem; border-left: 4px solid #1a3a5c; padding-left: 0.75rem; }
+    .section h4 { font-size: 1.1rem; font-weight: 700; color: #1a3a5c; margin: 1.5rem 0 0.5rem; }
+    .section p { color: #444; margin-bottom: 0.85rem; }
+    .section ul { color: #444; padding-left: 1.5rem; margin-bottom: 0.85rem; }
+    .section ul li { margin-bottom: 0.4rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
     .card { background: #f0f4f8; border: 1px solid #c8d8ee; border-radius: 8px; padding: 1.5rem; }
-    .card h4 { font-size: 1.05rem; font-weight: 700; color: #1a3a5c; margin-bottom: 0.5rem; }
-    .card p { font-size: 0.95rem; color: #555; }
+    .card h4 { font-size: 1.05rem; font-weight: 700; color: #1a3a5c; margin-bottom: 0.5rem; margin-top: 0; }
+    .card p { font-size: 0.95rem; color: #555; margin-bottom: 0; }
     .badge { display: inline-block; background: #e2eaf4; color: #1a3a5c; border-radius: 4px; padding: 0.25rem 0.75rem; font-size: 0.85rem; font-weight: 600; margin: 0.25rem; }
-    .stat-row { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem; justify-content: center; }
-    .stat { text-align: center; }
-    .stat .num { font-size: 2.5rem; font-weight: 800; color: #1a3a5c; }
-    .stat .label { font-size: 0.9rem; color: #666; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.95rem; }
+    .compare-table th { background: #1a3a5c; color: #fff; padding: 0.75rem 1rem; text-align: left; }
+    .compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; color: #444; }
+    .compare-table tr:nth-child(even) td { background: #f0f4f8; }
+    .faq { margin-top: 1.5rem; }
+    .faq-item { border-bottom: 1px solid #e0e8f0; padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h4 { font-size: 1.05rem; font-weight: 700; color: #1a3a5c; margin-bottom: 0.5rem; margin-top: 0; }
+    .faq-item p { font-size: 0.95rem; color: #555; margin: 0; }
+    .process-step { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+    .step-num { background: #1a3a5c; color: #fff; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .step-body h4 { margin: 0 0 0.25rem; font-size: 1rem; color: #1a3a5c; }
+    .step-body p { margin: 0; font-size: 0.95rem; color: #555; }
     .link-section { background: #1a3a5c; color: #fff; padding: 3rem 2rem; text-align: center; }
     .link-section h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
     .link-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
     .link-section a { background: #fff; color: #1a3a5c; padding: 1rem 2.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: 700; display: inline-block; }
     .link-section a:hover { background: #f0f4f8; text-decoration: none; }
     .footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; }
-    @media (max-width: 600px) { .hero h2 { font-size: 1.8rem; } }
+    @media (max-width: 600px) { .hero h2 { font-size: 1.8rem; } .stat-row { gap: 1rem; } }
   </style>
 </head>
 <body>
   <header class="header"><h1>B2B E-Commerce Today</h1></header>
   <section class="hero">
     <h2>B2B E-Commerce: Strategy, Platforms & Implementation</h2>
-    <p>The B2B buying journey has moved online. Companies that invest in digital sales channels with proper ERP integration, customer-specific pricing and procurement connectivity are winning market share — today.</p>
+    <p>The B2B buying journey has moved online. Buyers expect self-service portals, real-time inventory, customer-specific pricing and digital procurement integration — the same ease they experience as consumers, with the complexity their businesses require.</p>
     <a href="https://dahlquist.se/b2b-ehandel" class="cta-btn">Talk to a B2B E-Commerce Expert</a>
+    <div class="stat-row">
+      <div class="stat"><div class="num">73%</div><div class="label">of B2B buyers prefer self-service over sales reps (Gartner)</div></div>
+      <div class="stat"><div class="num">3–6×</div><div class="label">faster order processing with digital self-service vs. manual</div></div>
+      <div class="stat"><div class="num">40%</div><div class="label">reduction in order errors with real-time ERP integration</div></div>
+      <div class="stat"><div class="num">150+</div><div class="label">B2B and B2C e-commerce projects by Dahlquist since 2016</div></div>
+    </div>
   </section>
+
   <main class="main">
     <article>
+
       <section class="section">
-        <h3>The State of B2B E-Commerce</h3>
-        <p>B2B e-commerce has fundamentally changed how companies buy and sell. According to Forrester, over 70% of B2B buyers prefer to research and purchase online rather than through a sales representative. The expectation is a seamless digital experience that mirrors B2C — with the added complexity of company accounts, approval workflows, contract pricing and ERP integration.</p>
-        <p>The challenge for B2B sellers is not just building a webshop — it is building a system that handles the full complexity of business-to-business commerce: customer-specific product catalogues, negotiated price lists, order approval chains, purchase order numbers, and real-time inventory from the ERP system.</p>
+        <h3>What Makes B2B E-Commerce Fundamentally Different</h3>
+        <p>B2B e-commerce is not B2C with a larger order size. The requirements are structurally different — and underestimating that difference is the most common reason B2B webshop projects fail or deliver below expectations.</p>
+        <p>In B2C, every customer sees the same price, the same catalogue and the same checkout. In B2B, a single customer may have negotiated prices on 2,000 SKUs, a credit limit of 500,000 SEK, a requirement to include a purchase order number, and an approval flow that requires sign-off from a procurement manager before the order is placed. That customer expects your webshop to handle all of that — automatically.</p>
+
+        <h4>Core B2B e-commerce requirements</h4>
+        <ul>
+          <li><strong>Customer-specific pricing</strong> — negotiated price lists, volume discounts and customer-group rules applied at login</li>
+          <li><strong>Company accounts with multiple users</strong> — one company, multiple buyers with different roles and spending limits</li>
+          <li><strong>Order approval workflows</strong> — orders above a threshold require manager approval before processing</li>
+          <li><strong>Purchase order numbers</strong> — mandatory field capture for customers who pay by invoice with PO references</li>
+          <li><strong>Credit terms</strong> — net 30, net 60, net 90 payment terms integrated with your ERP credit management</li>
+          <li><strong>Custom catalogues</strong> — some customers only see specific product ranges based on their contract or segment</li>
+          <li><strong>Real-time inventory</strong> — stock levels synced from the ERP so customers always see accurate availability</li>
+          <li><strong>Invoice payment</strong> — B2B customers typically do not pay by card; invoice payment tied to the ERP is standard</li>
+          <li><strong>Procurement integration</strong> — PunchOut (cXML/OCI) for buyers using SAP Ariba, Coupa or similar systems</li>
+          <li><strong>Reorder functionality</strong> — quick order by SKU, order history reordering and requisition lists for repeat buyers</li>
+        </ul>
       </section>
+
       <section class="section">
-        <h3>B2B E-Commerce Platforms</h3>
-        <p>Choosing the right platform is the foundation of a successful B2B e-commerce investment. The two dominant choices for mid-market and enterprise B2B:</p>
-        <div class="grid">
-          <div class="card">
-            <h4>Shopify Plus B2B</h4>
-            <p>Shopify Plus has built a dedicated B2B commerce suite with company accounts, custom catalogues, customer-specific pricing, payment terms and wholesale storefronts — all natively integrated.</p>
-          </div>
-          <div class="card">
-            <h4>Adobe Commerce (Magento) B2B</h4>
-            <p>Magento's B2B module covers shared catalogues, company hierarchies, quotes, PunchOut and requisition lists — making it the choice for complex multi-channel B2B operations.</p>
-          </div>
-          <div class="card">
-            <h4>Headless B2B Commerce</h4>
-            <p>For companies with unique UX requirements, a headless architecture separates the front-end experience from the commerce engine — enabling maximum flexibility with a React or Next.js storefront.</p>
-          </div>
-          <div class="card">
-            <h4>Procurement Integration</h4>
-            <p>Enterprise B2B buyers often require PunchOut integration (cXML or OCI) to purchase directly from their procurement systems — SAP Ariba, Coupa, Jaggaer or Basware.</p>
-          </div>
-        </div>
+        <h3>B2B E-Commerce Platform Comparison</h3>
+        <p>Two platforms dominate serious B2B e-commerce implementations in Sweden and Europe: Shopify Plus and Adobe Commerce (Magento). Both can handle complex B2B requirements — but they suit different situations.</p>
+        <table class="compare-table">
+          <tr>
+            <th>Criteria</th>
+            <th>Shopify Plus B2B</th>
+            <th>Adobe Commerce (Magento) B2B</th>
+          </tr>
+          <tr><td>Time to launch</td><td>3–5 months</td><td>6–12 months</td></tr>
+          <tr><td>Native B2B features</td><td>Company accounts, custom catalogs, payment terms, draft orders</td><td>Shared catalogs, company hierarchies, quotes, PunchOut, requisition lists</td></tr>
+          <tr><td>PunchOut (cXML/OCI)</td><td>Via third-party app or custom</td><td>Native in Adobe Commerce B2B module</td></tr>
+          <tr><td>Customization depth</td><td>High via apps and APIs</td><td>Very high — full PHP module development</td></tr>
+          <tr><td>ERP integration</td><td>Strong API, many connectors available</td><td>Strong API, more complex but fully customizable</td></tr>
+          <tr><td>Total cost of ownership</td><td>Lower — hosted, no infrastructure</td><td>Higher — server costs, more dev dependency</td></tr>
+          <tr><td>Best suited for</td><td>Manufacturers, distributors 50M–2B SEK revenue</td><td>Complex multi-channel, high SKU, procurement-heavy operations</td></tr>
+        </table>
+        <p style="margin-top:1rem;font-size:0.9rem;color:#666;">Dahlquist is a certified Shopify Plus Partner and Adobe Commerce specialist. We give you an honest recommendation based on your specific situation — not based on which platform gives us the better margin.</p>
       </section>
+
       <section class="section">
-        <h3>Key Requirements for B2B E-Commerce</h3>
+        <h3>ERP Integration: The Foundation of Scalable B2B Commerce</h3>
+        <p>A B2B webshop without ERP integration is just a digital order form — it still requires manual processing, creates data inconsistency and cannot scale. Real-time ERP integration is what transforms a webshop into a genuine digital sales channel that reduces cost per order and eliminates manual work.</p>
+
+        <h4>What ERP integration covers</h4>
+        <ul>
+          <li><strong>Product data sync</strong> — products, descriptions, images, specifications and categories pushed from the ERP or PIM to the webshop</li>
+          <li><strong>Customer-specific pricing</strong> — price lists, discount structures and customer group rules pulled from the ERP at login</li>
+          <li><strong>Real-time inventory</strong> — stock levels, warehouse locations and availability windows synced in near-real-time</li>
+          <li><strong>Order ingestion</strong> — orders placed in the webshop sent automatically to the ERP for picking, packing and invoicing</li>
+          <li><strong>Customer account data</strong> — credit limits, payment terms, contact details and delivery addresses maintained in the ERP</li>
+          <li><strong>Invoice and order history</strong> — customers can view their full order and invoice history from the ERP inside the self-service portal</li>
+        </ul>
+
+        <h4>ERP systems we integrate with</h4>
         <p>
-          <span class="badge">Customer-specific pricing</span>
-          <span class="badge">Company accounts</span>
-          <span class="badge">Approval workflows</span>
-          <span class="badge">ERP integration</span>
-          <span class="badge">PunchOut (cXML/OCI)</span>
-          <span class="badge">Contract management</span>
-          <span class="badge">Requisition lists</span>
-          <span class="badge">Payment terms (net 30/60)</span>
+          <span class="badge">Microsoft Dynamics 365 Business Central</span>
+          <span class="badge">SAP S/4HANA</span>
+          <span class="badge">SAP Business One</span>
+          <span class="badge">Jeeves ERP</span>
+          <span class="badge">Visma Business</span>
+          <span class="badge">Fortnox</span>
+          <span class="badge">Monitor G5</span>
+          <span class="badge">Pyramid</span>
         </p>
+
+        <h4>Integration architecture</h4>
+        <p>The technical approach depends on the ERP system and data volume. Common patterns include direct REST/SOAP API integration, iPaaS middleware (Boomi, MuleSoft, Make, Alumio), or a custom-built integration layer. Dahlquist has built integrations using all of these approaches — we recommend the right pattern for your ERP, not the most complex one.</p>
       </section>
+
       <section class="section">
-        <h3>ERP Integration: The Core of B2B Digital Commerce</h3>
-        <p>A B2B webshop without ERP integration creates manual work and data inconsistency. Real-time synchronisation between the e-commerce platform and the ERP system (Business Central, SAP, Jeeves, Fortnox or Visma) is not optional — it is the foundation that makes digital B2B commerce operationally viable at scale.</p>
-        <p>Integration scope typically covers product data and pricing, customer account data, order ingestion, inventory levels and invoicing. The technical approach — direct API, middleware (iPaaS) or custom connector — depends on the ERP system and the complexity of the data model.</p>
+        <h3>PunchOut Checkout: Selling to Enterprise Procurement</h3>
+        <p>Enterprise and public sector buyers often mandate that all purchases go through their procurement system — SAP Ariba, Coupa, Jaggaer, Basware or similar. PunchOut checkout is the integration that makes this possible.</p>
+        <p>In a PunchOut flow, the buyer launches your webshop from inside their procurement system, shops your catalogue using their negotiated prices, and then — instead of checking out on your site — sends the cart back to their procurement system as a purchase requisition. The procurement system approves it and issues a purchase order, which triggers the order in your ERP and webshop.</p>
+        <p>Without PunchOut support, you cannot sell to these buyers at all — they will simply go to a competitor who supports their procurement system. For manufacturers and distributors selling to large industrial, healthcare or public sector customers, PunchOut is often a strategic requirement, not a nice-to-have.</p>
+        <p>Dahlquist implements both cXML and OCI PunchOut protocols for Shopify Plus and Magento, with full testing against the buyer's procurement system before go-live.</p>
       </section>
+
       <section class="section">
-        <h3>B2B E-Commerce Results</h3>
-        <div class="stat-row">
-          <div class="stat"><div class="num">3-6×</div><div class="label">Faster order processing with digital self-service</div></div>
-          <div class="stat"><div class="num">40%</div><div class="label">Reduction in order errors with ERP integration</div></div>
-          <div class="stat"><div class="num">25%</div><div class="label">Average increase in order value via cross-sell</div></div>
+        <h3>B2B E-Commerce Implementation: How It Works</h3>
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Requirements and architecture</h4>
+            <p>We map your customer types, pricing logic, ERP data model, procurement requirements and non-functional requirements (performance, uptime, security) before writing any code. This phase prevents the most expensive mistakes.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Platform and integration design</h4>
+            <p>We design the integration architecture between your e-commerce platform and ERP — data flows, sync frequency, error handling and fallback scenarios. Integration design is done before development starts.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Development and integration build</h4>
+            <p>Frontend development, backend customization and ERP connector build happen in parallel. We work in sprints with regular demos so you can see progress and give feedback throughout — not just at the end.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Testing with real customers</h4>
+            <p>B2B e-commerce must be tested with actual customer data — real price lists, real account structures, real order scenarios. We run user acceptance testing with selected customers before launch.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Controlled launch and hypercare</h4>
+            <p>We launch with a rollback plan, 24-hour monitoring and rapid-response support for the first weeks. B2B customers are less forgiving of post-launch bugs than B2C consumers.</p>
+          </div>
         </div>
       </section>
+
       <section class="section">
-        <h3>Why Dahlquist for B2B E-Commerce</h3>
-        <p>Dahlquist E-handelskonsulter has delivered B2B e-commerce solutions since 2016 for Swedish and international manufacturers, distributors and wholesalers. As a certified Shopify Plus Partner and Adobe Commerce specialist, we understand the full stack — from front-end UX to ERP connector architecture.</p>
+        <h3>Why Manufacturers and Distributors Choose Dahlquist</h3>
+        <p>Dahlquist E-handelskonsulter has been delivering B2B e-commerce solutions since 2016 for Swedish and international manufacturers, distributors and wholesalers. We understand the operational reality of B2B commerce — complex pricing, procurement compliance, ERP dependency — because we have solved those problems across more than 150 projects.</p>
+        <p>We are a certified Shopify Plus Partner and Adobe Commerce specialist. We have implemented PunchOut for buyers using SAP Ariba, Coupa and Jaggaer. We have built ERP integrations against Business Central, SAP, Jeeves and Visma. We have delivered multi-store B2B setups for manufacturers selling across multiple markets with different currencies, languages and price lists.</p>
+        <p>We work as a long-term partner — not a project house that hands over and disappears. Most of our B2B clients have been with us for three years or more.</p>
         <p>Read more about our B2B e-commerce services at <a href="https://dahlquist.se/b2b-ehandel">dahlquist.se/b2b-ehandel</a>.</p>
       </section>
+
+      <section class="section">
+        <h3>Frequently Asked Questions about B2B E-Commerce</h3>
+        <div class="faq">
+          <div class="faq-item">
+            <h4>What is the difference between B2B and B2C e-commerce?</h4>
+            <p>B2B e-commerce handles transactions between businesses — which means customer-specific pricing, company accounts with multiple buyers, purchase order numbers, approval workflows, credit terms and procurement system integration. B2C sells to individual consumers with fixed pricing and simpler checkout. The technical and operational complexity of B2B is significantly higher.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Which platform is best for B2B e-commerce — Shopify Plus or Magento?</h4>
+            <p>Shopify Plus B2B suits manufacturers and distributors who want fast time-to-market and lower maintenance overhead. Magento/Adobe Commerce B2B suits more complex operations requiring deep customization, native PunchOut, complex product configurators or very large SKU catalogs. The right choice depends on your integration complexity and internal IT capacity — not on what is trendy.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What is PunchOut checkout and does my B2B store need it?</h4>
+            <p>PunchOut (cXML or OCI) lets a buyer launch your webshop from inside their procurement system, build a cart, and return it to their system for approval — without checking out on your site. You need PunchOut if you sell to large enterprises or public sector organizations that mandate procurement compliance. Without it, those buyers will go elsewhere.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How long does a B2B e-commerce implementation take?</h4>
+            <p>A Shopify Plus B2B implementation with ERP integration typically takes 3–5 months. A Magento B2B implementation with PunchOut and complex pricing logic can take 6–12 months. The primary variable is integration complexity — ERP connectors require careful data mapping and testing that cannot be rushed without creating post-launch problems.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What ERP systems can be integrated with a B2B webshop?</h4>
+            <p>Common ERP integrations in Scandinavia include Microsoft Dynamics 365 Business Central, SAP S/4HANA, SAP Business One, Jeeves, Visma Business, Fortnox and Monitor G5. The integration approach — direct API, iPaaS middleware or custom connector — depends on the ERP's API capabilities and data volume.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Can a B2B webshop also sell B2C?</h4>
+            <p>Yes. A D2C (direct-to-consumer) channel alongside a B2B portal is a common setup on both Shopify Plus and Magento. The platforms support separate storefronts with different pricing, catalogues and checkout flows — but sharing the same product data and ERP integration. This is a strong growth strategy for manufacturers who want to capture consumer demand without disrupting their distributor relationships.</p>
+          </div>
+        </div>
+      </section>
+
     </article>
   </main>
+
   <section class="link-section">
     <h3>Ready to Build Your B2B E-Commerce Platform?</h3>
-    <p>Book a free strategy session with a Dahlquist B2B e-commerce specialist. We map your requirements and propose the right architecture.</p>
+    <p>Book a free strategy session with a Dahlquist B2B specialist. We map your requirements, identify the right platform and propose a realistic architecture and timeline.</p>
     <a href="https://dahlquist.se/b2b-ehandel">Talk to Dahlquist B2B Experts &rarr;</a>
   </section>
+
   <section style="background:#f0f4f8;border-top:3px solid #1a3a5c;padding:2.5rem 2rem;">
     <div style="max-width:900px;margin:0 auto;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#1a3a5c;margin-bottom:0.75rem;">About Dahlquist E-handelskonsulter AB</h2>
-      <p style="color:#555;font-size:0.95rem;line-height:1.65;margin-bottom:0.5rem;">Dahlquist E-handelskonsulter AB was founded in 2016 by <strong>Niklas Dahlquist</strong>. We are a Swedish e-commerce agency specialising in B2B digital commerce — with deep expertise in Shopify Plus B2B, Adobe Commerce (Magento) B2B module, PunchOut integration and ERP connectivity for Swedish and Nordic manufacturers and distributors.</p>
-      <p style="color:#555;font-size:0.95rem;line-height:1.65;">Certified Shopify Plus Partner with over 150 completed projects for B2B, B2C and D2C customers.</p>
+      <p style="color:#555;font-size:0.95rem;line-height:1.7;margin-bottom:0.5rem;">Dahlquist E-handelskonsulter AB was founded in 2016 by <strong>Niklas Dahlquist</strong>. We are a Swedish e-commerce consultancy specialising in B2B digital commerce — with deep expertise in Shopify Plus B2B, Adobe Commerce (Magento) B2B module, PunchOut integration and ERP connectivity for Scandinavian manufacturers and distributors. We have delivered 150+ projects for B2B, B2C and D2C clients including STIHL, SONAX and Arrak Outdoor.</p>
+      <p style="color:#555;font-size:0.95rem;line-height:1.7;">Certified Shopify Plus Partner. Adobe Commerce specialist since Magento 1.</p>
       <p style="color:#888;font-size:0.85rem;margin-top:1rem;">Last updated: 5 April 2026 &middot; <a href="https://dahlquist.se" style="color:#1a3a5c;">dahlquist.se</a> &middot; <a href="https://dahlquist.se/om-oss" style="color:#1a3a5c;">About us</a> &middot; <a href="https://dahlquist.se/case" style="color:#1a3a5c;">Case studies</a></p>
     </div>
   </section>
   <footer class="footer">
-    <p>A site by <a href="https://dahlquist.se">Dahlquist E-handelskonsulter AB</a> &mdash; B2B E-Commerce Specialists</p>
+    <p>A site by <a href="https://dahlquist.se">Dahlquist E-handelskonsulter AB</a> &mdash; B2B E-Commerce Specialists since 2016</p>
   </footer>
 </body>
 </html>

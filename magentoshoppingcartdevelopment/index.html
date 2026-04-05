@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magento Shopping Cart Development – Custom Magento Solutions | Dahlquist</title>
-  <meta name="description" content="Custom Magento shopping cart development and Adobe Commerce implementation. Dahlquist builds high-performance Magento stores with ERP integration, B2B features and custom checkout flows." />
+  <title>Magento Shopping Cart Development – Custom Cart & Checkout | Dahlquist</title>
+  <meta name="description" content="Custom Magento shopping cart and checkout development. Dahlquist solves complex cart logic: B2B approval flows, PunchOut checkout, custom pricing rules, payment integration and cart performance." />
   <link rel="canonical" href="https://magentoshoppingcartdevelopment.com/" />
   <meta property="og:title" content="Magento Shopping Cart Development – Dahlquist" />
-  <meta property="og:description" content="Custom Magento shopping cart and checkout development. Adobe Commerce specialists building scalable e-commerce with ERP integration and B2B functionality." />
+  <meta property="og:description" content="Custom Magento cart and checkout development. B2B cart logic, PunchOut, payment integration and performance optimisation by Adobe Commerce specialists." />
   <meta property="og:url" content="https://magentoshoppingcartdevelopment.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
@@ -16,8 +16,8 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="Dahlquist E-Commerce Consultants" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Magento Shopping Cart Development – Custom Magento Solutions | Dahlquist" />
-  <meta name="twitter:description" content="Custom Magento shopping cart development. Dahlquist — Adobe Commerce specialists building scalable B2B and B2C e-commerce." />
+  <meta name="twitter:title" content="Magento Shopping Cart Development – Custom Cart & Checkout | Dahlquist" />
+  <meta name="twitter:description" content="Custom Magento shopping cart and checkout development by Dahlquist — Adobe Commerce specialists." />
   <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
   <meta name="author" content="Dahlquist E-handelskonsulter AB" />
   <meta name="robots" content="index, follow" />
@@ -30,18 +30,39 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Dahlquist – Magento Shopping Cart Development",
-    "url": "https://dahlquist.se/magento",
-    "description": "Custom Magento shopping cart development and Adobe Commerce implementation for B2B and B2C merchants.",
-    "areaServed": { "@type": "Country", "name": "Sweden" },
-    "serviceType": "Magento Development and Adobe Commerce Implementation",
-    "sameAs": ["https://dahlquist.se/magento"]
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Magento's shopping cart work technically?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Magento's shopping cart is built around the Quote model — a database record that stores all cart state: items, quantities, pricing, shipping, discounts and customer data. Every cart action (add to cart, change quantity, apply coupon) triggers a quote collect totals process that recalculates the entire cart. This architecture is powerful but can be slow if not optimised — especially for large carts with complex pricing rules. Custom cart development means extending or overriding the quote/totals system through Magento's plugin and observer architecture."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add a custom field to the Magento checkout?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Adding a custom field to Magento checkout requires: (1) creating a custom module; (2) adding a UI component to the checkout layout XML to render the field; (3) creating a JavaScript mixin to add the field to the checkout model; (4) creating a plugin on the ShippingInformationManagement or PaymentInformationManagement to save the field value to the quote; (5) creating an observer on sales_order_place_after to copy the value from quote to order; (6) displaying the field in order confirmation emails and admin order view. This is a common requirement and Dahlquist has a battle-tested pattern for it."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my Magento cart page slow?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Slow Magento cart pages are almost always caused by: (1) unoptimised quote collection queries — the getItemCollection() call can trigger N+1 queries for large carts; (2) price rules that require loading the full product collection to evaluate; (3) cart sections (mini-cart) triggering full page reloads instead of section cache invalidation; (4) missing full-page cache configuration; (5) synchronous shipping rate requests on every cart update. Fix by profiling with the Magento developer toolbar, then targeting the specific bottleneck."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Magento mini-cart and the cart page?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The Magento mini-cart is a sidebar/dropdown component loaded via Magento's section cache mechanism — it stores cart data in localStorage and refreshes it asynchronously via AJAX when sections are invalidated. The cart page (/checkout/cart) is a full page that renders the complete cart using the quote model. Custom cart development often involves modifying both: the cart page for full cart interactions and the mini-cart section for the lightweight sidebar preview."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does PunchOut checkout work in Magento?",
+        "acceptedAnswer": {"@type": "Answer", "text": "PunchOut checkout (cXML or OCI) in Magento works as follows: (1) the buyer's procurement system sends a PunchOut Setup Request to Magento; (2) Magento authenticates the buyer and creates a session with their contract pricing; (3) the buyer shops and adds items to the cart; (4) instead of standard checkout, the buyer clicks 'Transfer Cart' which sends a PunchOut Order Message (cXML) or form post (OCI) back to the procurement system with the cart contents; (5) the procurement system raises a purchase requisition for approval; (6) when approved, a purchase order is sent to Magento as a cXML PO or EDI message, triggering order creation."}
+      }
+    ]
   }
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.65; }
+    body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; }
     a { color: #e8472b; text-decoration: none; } a:hover { text-decoration: underline; }
     .header { background: #e8472b; color: #fff; padding: 1rem 2rem; }
     .header h1 { font-size: 1.1rem; font-weight: 600; }
@@ -50,15 +71,30 @@
     .hero p { font-size: 1.2rem; color: #444; max-width: 700px; margin: 0 auto 2rem; }
     .cta-btn { display: inline-block; background: #e8472b; color: #fff; padding: 1rem 2.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; }
     .cta-btn:hover { background: #c23520; text-decoration: none; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+    .trust-item { background: #fff; border-radius: 6px; padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 600; color: #e8472b; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
     .main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .section { margin-bottom: 3rem; }
-    .section h3 { font-size: 1.5rem; font-weight: 700; color: #e8472b; margin-bottom: 1rem; border-left: 4px solid #e8472b; padding-left: 0.75rem; }
-    .section p { color: #444; margin-bottom: 0.75rem; }
+    .section { margin-bottom: 3.5rem; }
+    .section h3 { font-size: 1.55rem; font-weight: 700; color: #e8472b; margin-bottom: 1rem; border-left: 4px solid #e8472b; padding-left: 0.75rem; }
+    .section h4 { font-size: 1.1rem; font-weight: 700; color: #e8472b; margin: 1.5rem 0 0.5rem; }
+    .section p { color: #444; margin-bottom: 0.85rem; }
+    .section ul { color: #444; padding-left: 1.5rem; margin-bottom: 0.85rem; }
+    .section ul li { margin-bottom: 0.4rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
     .card { background: #fff5f3; border: 1px solid #f8d5cc; border-radius: 8px; padding: 1.5rem; }
-    .card h4 { font-size: 1.05rem; font-weight: 700; color: #e8472b; margin-bottom: 0.5rem; }
-    .card p { font-size: 0.95rem; color: #555; }
+    .card h4 { font-size: 1.05rem; font-weight: 700; color: #e8472b; margin-bottom: 0.5rem; margin-top: 0; }
+    .card p { font-size: 0.95rem; color: #555; margin-bottom: 0; }
     .badge { display: inline-block; background: #ffe8e3; color: #e8472b; border-radius: 4px; padding: 0.25rem 0.75rem; font-size: 0.85rem; font-weight: 600; margin: 0.25rem; }
+    .code-block { background: #1a1a2e; color: #e8e8f0; padding: 1.25rem 1.5rem; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; margin: 1rem 0; overflow-x: auto; }
+    .faq { margin-top: 1.5rem; }
+    .faq-item { border-bottom: 1px solid #f0d5d0; padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h4 { font-size: 1.05rem; font-weight: 700; color: #e8472b; margin-bottom: 0.5rem; margin-top: 0; }
+    .faq-item p { font-size: 0.95rem; color: #555; margin: 0; }
+    .process-step { display: flex; gap: 1rem; margin-bottom: 1.25rem; align-items: flex-start; }
+    .step-num { background: #e8472b; color: #fff; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .step-body h4 { margin: 0 0 0.25rem; font-size: 1rem; color: #e8472b; }
+    .step-body p { margin: 0; font-size: 0.95rem; color: #555; }
     .link-section { background: #e8472b; color: #fff; padding: 3rem 2rem; text-align: center; }
     .link-section h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
     .link-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -72,76 +108,196 @@
   <header class="header"><h1>Magento Shopping Cart Development</h1></header>
   <section class="hero">
     <h2>Custom Magento Cart & Checkout Development</h2>
-    <p>The shopping cart and checkout are where revenue is won or lost. Dahlquist develops high-performance, conversion-optimised Magento shopping carts with custom business logic, B2B approval flows and seamless payment integration.</p>
+    <p>The cart and checkout are where revenue is won or lost. A slow cart page, a checkout step that breaks on mobile, or a missing B2B field costs you real orders every day. Dahlquist develops and optimises Magento shopping carts that are fast, reliable and handle the full complexity of your business logic.</p>
     <a href="https://dahlquist.se/magento" class="cta-btn">Start Your Magento Project</a>
+    <div class="trust-row">
+      <span class="trust-item">Adobe Commerce specialists</span>
+      <span class="trust-item">Hyva Theme experts</span>
+      <span class="trust-item">PunchOut cXML &amp; OCI</span>
+      <span class="trust-item">150+ Magento projects</span>
+    </div>
   </section>
+
   <main class="main">
     <article>
+
       <section class="section">
-        <h3>Why Magento Shopping Cart Development Requires Specialists</h3>
-        <p>Magento's shopping cart is architecturally complex. It handles product types, quote management, tax calculation, shipping estimation, discount rules, payment methods and multi-address shipping — all in a system that can be extended but not easily replaced. Getting it right requires developers who understand Magento's quote/order lifecycle deeply.</p>
-        <p>Common failure points include: custom price calculations that break on edge cases, checkout steps that do not work on mobile, cart persistence bugs across sessions, and slow cart page load caused by unoptimised quote collection queries. Dahlquist has resolved all of these — many times.</p>
+        <h3>How Magento's Shopping Cart Works — and Why It's Complex</h3>
+        <p>Magento's cart is built around the <strong>Quote model</strong> — a database entity that stores the entire state of a shopping session: items, quantities, pricing (including tier prices, catalog rules and cart rules), applied coupons, shipping information, and customer-specific data. Every cart interaction triggers a <code>collectTotals()</code> process that re-evaluates the entire quote from scratch.</p>
+        <p>This architecture is powerful and flexible — but it means that custom cart logic must integrate carefully with the totals collection pipeline, and that performance depends heavily on how efficiently that pipeline is implemented. A poorly written custom price total or an extension that loads unnecessary data on every cart page view can make the cart unusably slow.</p>
+        <p>Understanding the quote lifecycle is the foundation of good Magento cart development. Dahlquist's developers have worked with this system across more than 150 projects — from simple custom fields to fully custom B2B cart flows with procurement system integration.</p>
+
+        <h4>The Magento quote/cart data flow</h4>
+        <ul>
+          <li><strong>Quote items</strong> — each product in the cart, with its own price, qty and custom options</li>
+          <li><strong>Quote addresses</strong> — shipping and billing addresses, each with their own totals</li>
+          <li><strong>Total collectors</strong> — ordered list of classes that calculate subtotal, tax, shipping, discounts, etc.</li>
+          <li><strong>Quote extensions</strong> — custom attributes added to the quote via extension attributes</li>
+          <li><strong>Cart sections</strong> — serialised cart data cached in the browser, invalidated via AJAX section loading</li>
+        </ul>
       </section>
+
       <section class="section">
-        <h3>Custom Cart & Checkout Capabilities</h3>
+        <h3>Custom Cart and Checkout Capabilities</h3>
+
         <div class="grid">
           <div class="card">
-            <h4>Custom checkout steps</h4>
-            <p>Add or modify checkout steps — delivery date selection, project code entry, custom terms, reference number fields — without breaking standard checkout functionality.</p>
+            <h4>Custom checkout steps and fields</h4>
+            <p>Add fields to the Magento checkout — delivery date picker, project code, purchase order number, reference field, custom terms acceptance — without breaking native checkout functionality. We use Magento's UI component system and save values through the quote to the order.</p>
           </div>
           <div class="card">
             <h4>B2B cart logic</h4>
-            <p>Company-specific price rules, minimum order quantities, customer group discounts, approval workflows and purchase order number capture integrated into the cart flow.</p>
+            <p>Customer-specific price rules applied at cart level, minimum order quantity enforcement, customer group discounts, order approval workflows that hold the order pending manager sign-off, and purchase order number capture integrated into the quote model.</p>
+          </div>
+          <div class="card">
+            <h4>Custom total collectors</h4>
+            <p>Implement custom line items in the cart: handling fees, environmental fees, pallet charges, custom discount structures or surcharges based on cart contents, customer type or shipping zone. Built as proper Magento total collectors that integrate with the tax system.</p>
           </div>
           <div class="card">
             <h4>Multi-address checkout</h4>
-            <p>Allow B2B customers to split a single order across multiple delivery addresses — critical for companies ordering on behalf of multiple departments or locations.</p>
+            <p>Allow B2B customers to split a single order across multiple delivery addresses — critical for companies ordering on behalf of multiple departments or locations. Fully integrated with Magento's multi-shipping checkout flow and ERP order splitting.</p>
           </div>
           <div class="card">
             <h4>Payment method integration</h4>
-            <p>Native integration with Klarna, Stripe, Adyen, Svea Ekonomi, Nets and invoice payment for B2B — with fallback logic and retry handling.</p>
-          </div>
-          <div class="card">
-            <h4>Cart performance</h4>
-            <p>Optimised quote collection queries, selective full-page cache invalidation and cart mini-view performance improvements for large catalogues and high-SKU orders.</p>
+            <p>Native integration with Klarna Checkout, Stripe, Adyen, Svea Ekonomi, Nets Easy and invoice payment for B2B — with fallback logic, retry handling and proper error state management. We implement payment methods as proper Magento payment modules, not iframes with workarounds.</p>
           </div>
           <div class="card">
             <h4>PunchOut checkout</h4>
-            <p>For B2B merchants selling to procurement-driven buyers, implement cXML and OCI PunchOut checkout flows that return the cart to SAP Ariba, Coupa or Jaggaer.</p>
+            <p>cXML and OCI PunchOut checkout for B2B merchants selling to procurement-driven buyers using SAP Ariba, Coupa, Jaggaer or Basware. Full session management, contract pricing integration and return cart message handling.</p>
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <h3>Cart Performance Optimisation</h3>
+        <p>A slow cart page is a conversion killer. Every additional second of cart load time reduces the probability of checkout by 7–10%. Magento carts become slow for predictable reasons — and all of them are fixable once you know where to look.</p>
+
+        <h4>Common cart performance problems and fixes</h4>
+        <ul>
+          <li><strong>Unoptimised quote collection queries</strong> — loading all quote items with full product objects instead of using join queries. Fix: use <code>addAttributeToSelect()</code> selectively and join only needed data.</li>
+          <li><strong>Price rules evaluated against full product collection</strong> — cart rules that load and iterate all products in the catalog to check applicability. Fix: redesign rule conditions to use indexed data.</li>
+          <li><strong>Synchronous shipping rate requests on cart load</strong> — calling external shipping APIs on every page view. Fix: debounce shipping estimation requests and cache results per shipping zone.</li>
+          <li><strong>Full-page cache misconfiguration</strong> — cart pages are not cacheable by design, but the surrounding layout often is. Fix: configure FPC hole punching correctly so the page frame is cached while the cart section loads via AJAX.</li>
+          <li><strong>Mini-cart invalidation on every request</strong> — extensions that invalidate the <code>cart</code> section unnecessarily on every request. Fix: audit section invalidation config in all installed extensions.</li>
+          <li><strong>No Redis for session storage</strong> — using file-based sessions causes locking and slowness under concurrent load. Fix: configure Redis as session storage with proper locking timeout settings.</li>
+        </ul>
+
+        <h4>Tools we use for cart performance diagnosis</h4>
+        <p>
+          <span class="badge">Magento Developer Toolbar</span>
+          <span class="badge">Blackfire.io</span>
+          <span class="badge">New Relic APM</span>
+          <span class="badge">MySQL slow query log</span>
+          <span class="badge">Chrome DevTools Network</span>
+          <span class="badge">Lighthouse</span>
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>PunchOut Checkout: Selling Into Procurement Systems</h3>
+        <p>Enterprise and public sector buyers often require that all purchases pass through their procurement system before a purchase order is issued. PunchOut checkout is the integration that enables this — and without it, you simply cannot sell to these buyers at all.</p>
+
+        <h4>How Magento PunchOut works (cXML protocol)</h4>
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>PunchOut Setup Request</h4>
+            <p>The buyer's procurement system (SAP Ariba, Coupa, Jaggaer) sends a cXML PunchOut Setup Request to your Magento store. Magento authenticates the buyer, loads their contract pricing and creates a session.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Buyer shops in your store</h4>
+            <p>The buyer is redirected to your Magento store and shops normally. They see their negotiated prices, their approved product catalog and their language. The cart behaves as a standard Magento cart.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Transfer Cart (instead of standard checkout)</h4>
+            <p>Instead of a standard checkout, the buyer clicks "Transfer Cart" (or "Return Cart"). Magento generates a cXML PunchOut Order Message containing all cart items, quantities and prices, and posts it back to the procurement system.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Procurement approval</h4>
+            <p>The procurement system creates a purchase requisition from the cart data. The requisition goes through the buyer's internal approval workflow (department manager, procurement controller, etc.).</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Purchase Order received by Magento</h4>
+            <p>Once approved, the procurement system sends a cXML Purchase Order (or EDI 850) to Magento. Magento creates the order automatically, triggers ERP order ingestion and sends confirmation to the buyer.</p>
+          </div>
+        </div>
+
+        <p>Dahlquist implements both cXML and OCI PunchOut protocols. We test against the buyer's actual procurement system before go-live — not just against a test harness.</p>
+      </section>
+
       <section class="section">
         <h3>Technology Stack</h3>
         <p>
           <span class="badge">Magento 2.4.x</span>
           <span class="badge">Adobe Commerce Cloud</span>
-          <span class="badge">PHP 8.x</span>
-          <span class="badge">GraphQL</span>
+          <span class="badge">PHP 8.1 / 8.2</span>
+          <span class="badge">GraphQL API</span>
           <span class="badge">Hyva Theme</span>
-          <span class="badge">Elasticsearch</span>
+          <span class="badge">Alpine.js</span>
+          <span class="badge">Elasticsearch / OpenSearch</span>
           <span class="badge">Redis</span>
-          <span class="badge">Varnish</span>
+          <span class="badge">Varnish / Fastly</span>
           <span class="badge">Docker / Warden</span>
+          <span class="badge">Blackfire.io</span>
+          <span class="badge">New Relic</span>
         </p>
       </section>
+
       <section class="section">
-        <h3>From Cart to Conversion</h3>
-        <p>A well-built Magento shopping cart is fast, reliable and does not get in the way of the purchase. Dahlquist combines technical Magento development with conversion optimisation thinking — ensuring every cart and checkout improvement is validated against real user behaviour and revenue impact.</p>
-        <p>See our Magento case studies and capabilities at <a href="https://dahlquist.se/magento">dahlquist.se/magento</a>.</p>
+        <h3>Frequently Asked Questions about Magento Cart Development</h3>
+        <div class="faq">
+          <div class="faq-item">
+            <h4>How does Magento's shopping cart work technically?</h4>
+            <p>Magento's cart is built around the Quote model — a database record storing all cart state. Every cart action triggers a collectTotals() process that recalculates the entire cart via an ordered pipeline of total collector classes. Custom cart development means extending this system through plugins, observers and custom total collectors, while maintaining compatibility with Magento's native tax, shipping and discount systems.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How do I add a custom field to Magento checkout?</h4>
+            <p>Adding a custom field requires: a custom module, a UI component in the checkout layout, a JavaScript mixin for the checkout model, a plugin on ShippingInformationManagement to save the field to the quote, and an observer to copy it to the order on placement. Dahlquist has a battle-tested pattern for this that handles all edge cases including guest checkout and multi-shipping.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Why is my Magento cart page slow?</h4>
+            <p>Almost always caused by: unoptimised quote collection queries, price rules evaluated against the full product collection, synchronous shipping rate requests on every load, FPC misconfiguration, or mini-cart section being invalidated on every request. Profile with the Magento developer toolbar or Blackfire.io to find the actual bottleneck before optimising.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What is the difference between Magento's mini-cart and the cart page?</h4>
+            <p>The mini-cart is a sidebar component loaded via Magento's section cache (stored in localStorage, refreshed asynchronously via AJAX when sections are invalidated). The cart page is a full page rendering the complete quote. Custom development often involves both — the cart page for full interactions and the mini-cart section for the lightweight sidebar view.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How does PunchOut checkout work in Magento?</h4>
+            <p>The buyer's procurement system sends a cXML PunchOut Setup Request to Magento, which creates an authenticated session with contract pricing. The buyer shops and adds items, then clicks "Transfer Cart" — which sends a cXML PunchOut Order Message back to the procurement system instead of checking out. The procurement system processes the requisition, and when approved, sends a Purchase Order to Magento that triggers automatic order creation.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Can Magento handle B2B order approval workflows in the cart?</h4>
+            <p>Yes — Adobe Commerce B2B includes native purchase approval workflows. Orders above a configured threshold are held pending manager approval before processing. The cart converts to a pending order visible in the company account dashboard. Magento Open Source can achieve similar functionality through custom development or third-party extensions.</p>
+          </div>
+        </div>
       </section>
+
     </article>
   </main>
+
   <section class="link-section">
-    <h3>Ready to Improve Your Magento Checkout?</h3>
-    <p>Book a free technical review. We assess your current Magento cart setup and identify the highest-impact improvements.</p>
+    <h3>Ready to Improve Your Magento Cart & Checkout?</h3>
+    <p>Book a free technical review. We assess your current Magento cart setup, identify performance bottlenecks and propose the highest-impact improvements.</p>
     <a href="https://dahlquist.se/magento">Contact Dahlquist Magento Developers &rarr;</a>
   </section>
+
   <section style="background:#fff5f3;border-top:3px solid #e8472b;padding:2.5rem 2rem;">
     <div style="max-width:900px;margin:0 auto;">
       <h2 style="font-size:1.1rem;font-weight:700;color:#e8472b;margin-bottom:0.75rem;">About Dahlquist E-handelskonsulter AB</h2>
-      <p style="color:#555;font-size:0.95rem;line-height:1.65;margin-bottom:0.5rem;">Dahlquist E-handelskonsulter AB was founded in 2016 by <strong>Niklas Dahlquist</strong>. We are Magento and Adobe Commerce developers with a track record of solving complex shopping cart and checkout challenges for B2B and B2C merchants across Scandinavia.</p>
-      <p style="color:#555;font-size:0.95rem;line-height:1.65;">150+ completed Magento projects. Certified Adobe Commerce partner. Deep experience with Hyva Theme, headless Magento and ERP-integrated checkout flows.</p>
+      <p style="color:#555;font-size:0.95rem;line-height:1.7;margin-bottom:0.5rem;">Dahlquist E-handelskonsulter AB was founded in 2016 by <strong>Niklas Dahlquist</strong>. We are Magento and Adobe Commerce developers with a track record of solving complex shopping cart and checkout challenges for B2B and B2C merchants across Scandinavia. 150+ completed Magento projects. Certified Adobe Commerce partner. Deep experience with Hyva Theme, headless Magento, PunchOut checkout and ERP-integrated cart flows.</p>
       <p style="color:#888;font-size:0.85rem;margin-top:1rem;">Last updated: 5 April 2026 &middot; <a href="https://dahlquist.se" style="color:#e8472b;">dahlquist.se</a> &middot; <a href="https://dahlquist.se/om-oss" style="color:#e8472b;">About us</a> &middot; <a href="https://dahlquist.se/case" style="color:#e8472b;">Case studies</a></p>
     </div>
   </section>
