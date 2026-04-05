@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magento PWA Sverige | Progressive Web App för Adobe Commerce</title>
+<meta name="description" content="Magento PWA-lösningar med PWA Studio och Venia. Bygg en app-liknande e-handelsupplevelse med Magento/Adobe Commerce som backend. Expert sedan 2016.">
+<link rel="canonical" href="https://magento-pwa.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Magento PWA Sverige",
+  "description": "Magento PWA-lösningar med PWA Studio",
+  "url": "https://magento-pwa.se/",
+  "dateModified": "2026-04-05",
+  "author": {"@type": "Person","name": "Niklas Dahlquist","url": "https://dahlquist.se"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vad är en PWA och hur skiljer den sig från en vanlig webbsida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Progressive Web App (PWA) är en webbapplikation som beter sig som en native app. En PWA kan: installeras på hemskärmen på mobilen (utan app store), fungera offline med Service Worker-cache, skicka push-notifikationer och ge app-liknande navigation med snabba sidövergångar. Tekniskt är en PWA byggd med moderna webbteknologier (React/Vue) och kommunicerar med backend via API. För e-handel innebär det snabbare sidladdning och bättre mobilupplevelse, vilket ökar konverteringen på mobila enheter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är Magento PWA Studio och Venia storefront?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PWA Studio är Adobe's officiella ramverk för att bygga PWA-frontends mot Magento/Adobe Commerce. Det inkluderar Peregrine (React hooks-bibliotek för Magento-funktionalitet), Venia (en färdig PWA-storefront att bygga vidare på), Buildpack (byggverktyg) och UPWARD (server-konfiguration). Venia är en komplett PWA-butik med produktlistor, produktsidor, sökning, kundvagn och checkout – alla komponenter är anpassningsbara och kan byggas om med er design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Är Magento PWA Studio rätt val eller ska man välja Hyva Theme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "För de flesta Magento-projekt rekommenderar vi Hyva Theme framför PWA Studio. Hyva ger 3–5x bättre prestanda jämfört med Luma, använder Tailwind CSS och Alpine.js (enklare att underhålla än React), har ett aktivt community och kräver ingen API-layer. PWA Studio passar om ni specifikt behöver: offline-funktionalitet, push-notifikationer, installation på hemskärmen, eller samma backend ska driva både webb och mobilapp. Hyva med Hyva Compat för PWA är ofta ett bättre mellanting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man bygga en mobilapp med Magento som backend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Adobe Commerce/Magento 2 har ett komplett GraphQL API som kan driva en React Native-mobilapp. En hybridstrategi är vanlig: PWA/Next.js-webb och React Native-app som båda konsumerar samma Magento GraphQL API. Det ger koddelning mellan plattformarna och ett gemensamt produktkatalog-lager. Magento GraphQL stöder produktlistor, produktsidor, sökning, kundvagn, checkout och kundkonto – allt som behövs för en komplett mobilapp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad kostar en Magento PWA-implementation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Magento PWA Studio-implementation kostar typiskt 600 000–1 500 000 kr beroende på scope och designkomplexitet. Det är dyrare än Hyva Theme (200 000–500 000 kr) men ger fler app-funktioner. Räkna med 6–12 månaders byggtid för en fullständig PWA. Löpande underhåll kräver React/GraphQL-kompetens, vilket är dyrare än Liquid/PHP. Vi rekommenderar alltid att börja med en ROI-analys – ofta kan Core Web Vitals-målen uppnås billigare med Hyva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Stöder Magento PWA svenska betalningslösningar som Klarna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, men med viss komplexitet. Klarna i Magento PWA kräver att Klarna's frontend-komponent integreras i React-checkout-flödet via Klarna's JavaScript-SDK. Det finns community-extensions för detta men kräver anpassad implementation. Swish fungerar som en redirect-betalning och integreras enklare. Nets Easy och Bambora har befintliga community-integrationer för PWA Studio. Vi har erfarenhet av svenska betalningslösningar i Magento PWA-miljö."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#e8472b;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#e8472b 0%,#a82000 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#e8472b;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#fff5f0;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#e8472b;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #ffd0c0;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(232,71,43,.1)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;margin-top:32px;font-size:.95rem}
+  th{background:#e8472b;color:#fff;padding:12px 16px;text-align:left}
+  td{padding:11px 16px;border-bottom:1px solid #eee}
+  tr:nth-child(even) td{background:#fff8f5}
+  .check{color:#e8472b;font-weight:700}
+  .cross{color:#aaa}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #ffd0c0;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#e8472b}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#fff5f0;border:1px solid #ffb090;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#e8472b}
+  .info{background:#f0f6ff;border-left:4px solid #0057b8;padding:20px 24px;border-radius:6px;margin:32px 0;font-size:.95rem}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .clients{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px}
+  .client-tag{background:rgba(255,255,255,.1);border-radius:6px;padding:8px 20px;font-size:.9rem}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>Magento PWA Sverige</h1>
+    <p>Progressive Web App-lösningar för Adobe Commerce/Magento. PWA Studio, Venia Storefront och React Native mobilappar med Magento GraphQL som backend. Expert sedan 2016.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Boka PWA-konsultation</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Magento PWA – app-liknande e-handel på webben</h2>
+    <p class="lead">En Magento PWA ger era kunder en app-liknande upplevelse direkt i webbläsaren – utan App Store. Snabba sidladdningar, offline-funktionalitet och möjlighet att installera på hemskärmen. Allt drivet av er befintliga Adobe Commerce-installation.</p>
+    <div class="info">
+      <strong>Överväg Hyva Theme först:</strong> För de flesta Magento-projekt ger Hyva Theme 80% av PWA-prestandan till 30% av kostnaden. PWA Studio motiveras när ni specifikt behöver offline-stöd, push-notifikationer eller mobilapp-integration.
+    </div>
+    <div class="stats">
+      <div><div class="stat-num">&lt;2s</div><div class="stat-label">LCP med PWA Studio</div></div>
+      <div><div class="stat-num">100</div><div class="stat-label">Lighthouse Performance möjligt</div></div>
+      <div><div class="stat-num">GraphQL</div><div class="stat-label">Adobe Commerce API-standard</div></div>
+      <div><div class="stat-num">10+</div><div class="stat-label">Magento PWA-projekt</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>PWA Studio vs Hyva Theme – vilket ska man välja?</h2>
+    <table>
+      <tr><th>Aspekt</th><th>PWA Studio (React)</th><th>Hyva Theme (Tailwind/Alpine)</th></tr>
+      <tr><td>Prestanda</td><td class="check">Excellent</td><td class="check">Excellent (3–5x vs Luma)</td></tr>
+      <tr><td>Offline-stöd</td><td class="check">✓ Service Worker</td><td class="cross">✗</td></tr>
+      <tr><td>Push-notifikationer</td><td class="check">✓</td><td class="cross">✗</td></tr>
+      <tr><td>Installeras på hemskärmen</td><td class="check">✓</td><td class="cross">✗</td></tr>
+      <tr><td>Byggkostnad</td><td>600 000–1 500 000 kr</td><td class="check">200 000–500 000 kr</td></tr>
+      <tr><td>Underhållskomplexitet</td><td>Hög (React)</td><td class="check">Låg (Tailwind/Alpine)</td></tr>
+      <tr><td>Time-to-market</td><td>6–12 månader</td><td class="check">3–6 månader</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Våra Magento PWA-tjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">⚛️</div><h3>PWA Studio / Venia</h3><p>Fullständig PWA Studio-implementation med Venia Storefront som bas. Anpassad design, komponentutveckling och extension-integration.</p></div>
+      <div class="svc"><div class="svc-icon">📱</div><h3>React Native-app</h3><p>Mobilapp för iOS och Android med Magento GraphQL-backend. Dela affärslogik mellan webb-PWA och mobilapp.</p></div>
+      <div class="svc"><div class="svc-icon">🔌</div><h3>GraphQL API-utbyggnad</h3><p>Anpassade GraphQL queries och mutations för er specifika Magento-konfiguration, extensions och custom-attribut.</p></div>
+      <div class="svc"><div class="svc-icon">💳</div><h3>Betalningsintegration</h3><p>Klarna, Nets Easy och Swish i PWA Studio checkout-flödet via JavaScript-SDK och anpassad React-integration.</p></div>
+      <div class="svc"><div class="svc-icon">⚡</div><h3>Prestandaoptimering</h3><p>Service Worker-caching, kritisk CSS, bildoptimering och edge-deployment för maximala Core Web Vitals-poäng.</p></div>
+      <div class="svc"><div class="svc-icon">🔄</div><h3>Migration från Luma</h3><p>Gradvis migration från Luma-tema till PWA Studio. Vi migrerar sida för sida utan driftstopp via Magento's Application Server.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>Vanliga frågor om Magento PWA</h2>
+    <div class="faq">
+      <details><summary>Vad är en PWA och hur skiljer den sig från en vanlig webbsida?</summary><div class="faq-body">En PWA beter sig som en native app i webbläsaren. Den kan installeras på hemskärmen, fungera offline med Service Worker, skicka push-notifikationer och ge app-liknande navigation. Byggd med React och kommunicerar med backend via API.</div></details>
+      <details><summary>Vad är Magento PWA Studio och Venia?</summary><div class="faq-body">PWA Studio är Adobe's officiella React-ramverk för Magento-frontends. Venia är en färdig PWA-storefront att bygga vidare på med produktlistor, sökning, kundvagn och checkout – alla komponenter är anpassningsbara.</div></details>
+      <details><summary>PWA Studio vs Hyva Theme?</summary><div class="faq-body">Hyva rekommenderas för de flesta projekt – lägre kostnad (200 000–500 000 kr vs 600 000–1 500 000 kr), enklare underhåll och 3–5x prestandaökning. PWA Studio motiveras vid behov av offline-stöd, push-notifikationer eller mobilapp-integration.</div></details>
+      <details><summary>Kan man bygga en mobilapp med Magento?</summary><div class="faq-body">Ja. Adobe Commerce GraphQL API driver React Native-mobilappar. Hybridstrategi: PWA/Next.js webb + React Native app som båda konsumerar Magento GraphQL. Stöder produkter, sökning, kundvagn, checkout och kundkonto.</div></details>
+      <details><summary>Vad kostar en Magento PWA?</summary><div class="faq-body">PWA Studio-implementation: 600 000–1 500 000 kr, 6–12 månaders byggtid. Löpande underhåll kräver React/GraphQL-kompetens. Hyva Theme ger liknande prestanda till 200 000–500 000 kr och 3–6 månaders byggtid.</div></details>
+      <details><summary>Stöder Magento PWA Klarna?</summary><div class="faq-body">Ja, med anpassad React-integration via Klarna's JavaScript-SDK i PWA Studio checkout-flödet. Vi har genomfört svenska betalningsintegrationer i Magento PWA-miljö.</div></details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">Magento PWA-expert sedan 2016</h2>
+    <p>Niklas Dahlquist och teamet på Dahlquist har byggt PWA-lösningar för Adobe Commerce med PWA Studio och anpassade React-frontends för svenska och nordiska e-handlare.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Adobe Commerce Partner</span><span class="badge">PWA Studio</span><span class="badge">React/GraphQL</span><span class="badge">Hyva Theme</span>
+    </div>
+    <div class="clients"><span class="client-tag">STIHL</span><span class="client-tag">SONAX</span><span class="client-tag">Arrak Outdoor</span></div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/magento" style="color:#ff9070">Läs mer om Magento på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – Magento PWA Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

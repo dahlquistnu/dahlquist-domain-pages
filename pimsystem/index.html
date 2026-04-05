@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIM-system Sverige | Produktinformationshantering för e-handel</title>
+<meta name="description" content="PIM-system för svenska e-handlare. Akeneo, Pimcore och Crystallize – vi implementerar och integrerar PIM mot Shopify och Adobe Commerce. Expert sedan 2016.">
+<link rel="canonical" href="https://pimsystem.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "PIM-system Sverige",
+  "description": "Produktinformationshantering för e-handel",
+  "url": "https://pimsystem.se/",
+  "dateModified": "2026-04-05",
+  "author": {"@type": "Person","name": "Niklas Dahlquist","url": "https://dahlquist.se"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vad är ett PIM-system och varför behöver man det?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PIM (Product Information Management) är ett system för att samla, berika och distribuera produktinformation till alla försäljningskanaler. Utan PIM lever produktdata spridd i Excel, ERP, produktfotomappar och e-handelsplattformen – vilket leder till inkonsekventa produktbeskrivningar, saknade attribut och manuellt dubbelarbete. Med PIM har ni en enda källa till sanning för alla produkter: attribut, bilder, översättningar, kategorier och kanalspecifik data. PIM lönar sig typiskt när ni har 1 000+ produkter eller säljer i mer än 2 kanaler."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vilka PIM-system passar för svenska e-handlare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De mest använda PIM-systemen i Sverige: Akeneo (marknadsledare, Community Edition gratis, Growth/Enterprise 30 000–100 000 kr/mån), Pimcore (open source, gratis Community Edition, starkt inom DAM), Crystallize (headless PIM med GraphQL API, 2 000–20 000 kr/mån), Plytix (SMB-fokuserat, 2 000–8 000 kr/mån) och inriver (enterprise, 50 000+ kr/mån). Vi rekommenderar Akeneo Community Edition för SMB-handlare och Akeneo Growth/Enterprise eller inriver för enterprise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur integrerar PIM med Shopify och Adobe Commerce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PIM integreras med e-handelsplattformen via API. Akeneo har officiella connectorer för Shopify (via Akeneo App Store) och Adobe Commerce. Integrationen synkroniserar: produktattribut, kategorier, bilder, priser (om PIM hanterar priser) och kanalkonfiguration. Synkroniseringen kan vara schemalagd (varje timme) eller händelsebaserad (webhook vid PIM-publicering). Vi bygger också anpassade PIM-integrationer när standardkopplingarna inte räcker – t.ex. för komplexa attributmappningar eller ERP-triangulering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är skillnaden mellan PIM och ERP för produkthantering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ERP (t.ex. Monitor, SAP) hanterar affärsdata: priser, lagersaldon, leverantörer, inköpsorders och ekonomi. ERP är optimerat för interna processer, inte för kundvändande produktpresentation. PIM hanterar marknadsdata: produktbeskrivningar, attribut, bilder, SEO-texter, lokalisering och kanalspecifik data. De kompletterar varandra: ERP är källa till artikkelnummer, basdata och priser, PIM är källa till allt kunder behöver för att fatta köpbeslut. Informationsflödet är typiskt ERP → PIM → e-handelsplattform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man använda PIM utan ERP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, PIM och ERP är oberoende system. Många e-handlare implementerar PIM utan ERP – de importerar produktdata manuellt eller från leverantörers datafiler (Excel, ETIM, BMEcat). PIM ersätter i det fallet produkthanteringen i e-handelsplattformen som primär datakälla. Om ni hanterar produktinformation i Excel idag och säljer i Shopify är PIM nästa steg – ERP kan vänta tills affärsprocesserna kräver det."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad kostar ett PIM-system och implementation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Licenskostnad: Akeneo Community Edition gratis (self-hosted), Akeneo Growth 30 000–60 000 kr/mån, Plytix 2 000–8 000 kr/mån, inriver 50 000+ kr/mån. Implementation inkl. konfiguration, datamodell, import av befintlig produktdata och Shopify/Adobe Commerce-integration kostar 150 000–600 000 kr beroende på katalogstorlek och komplexitet. Räkna med 8–20 veckors implementationsprojekt. ROI uppnås typiskt inom 6–18 månader via reducerat manuellt arbete."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#1a3a5c;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#1a3a5c 0%,#0d1f3c 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#1a3a5c;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#f0f4f8;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#1a3a5c;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #c0d0e0;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(26,58,92,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;margin-top:32px;font-size:.9rem}
+  th{background:#1a3a5c;color:#fff;padding:12px 16px;text-align:left}
+  td{padding:11px 16px;border-bottom:1px solid #eee}
+  tr:nth-child(even) td{background:#f8fafc}
+  .check{color:#1a3a5c;font-weight:700}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #c0d0e0;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#1a3a5c}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#f0f4f8;border:1px solid #a0b8d0;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#1a3a5c}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .clients{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px}
+  .client-tag{background:rgba(255,255,255,.1);border-radius:6px;padding:8px 20px;font-size:.9rem}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>PIM-system Sverige</h1>
+    <p>Produktinformationshantering för e-handlare med komplexa kataloger. Akeneo, Pimcore och Crystallize integrerade mot Shopify och Adobe Commerce. Expert sedan 2016.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Boka PIM-konsultation</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>PIM – en enda källa till sanning för era produkter</h2>
+    <p class="lead">Utan PIM lever produktdata spridd i Excel, ERP och e-handelsplattformen. Inkonsekventa produktbeskrivningar, saknade bilder och manuellt dubbelarbete kostar tid och tappar försäljning. PIM samlar allt på ett ställe och distribuerar rätt data till rätt kanal.</p>
+    <div class="stats">
+      <div><div class="stat-num">60%</div><div class="stat-label">Reducerat manuellt produktarbete</div></div>
+      <div><div class="stat-num">1 000+</div><div class="stat-label">Produkter – typisk PIM-tröskel</div></div>
+      <div><div class="stat-num">6-18m</div><div class="stat-label">Typisk payback-period</div></div>
+      <div><div class="stat-num">10+</div><div class="stat-label">PIM-implementationer levererade</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8fafc">
+  <div class="container">
+    <h2>PIM-system jämförelse för svenska e-handlare</h2>
+    <table>
+      <tr><th>System</th><th>Passar för</th><th>Pris/mån</th><th>Shopify-integration</th></tr>
+      <tr><td>Akeneo Community</td><td>SMB, 1 000–50 000 produkter</td><td>Gratis (self-hosted)</td><td class="check">✓ Officiell</td></tr>
+      <tr><td>Akeneo Growth</td><td>Tillväxtföretag</td><td>30 000–60 000 kr</td><td class="check">✓ Officiell</td></tr>
+      <tr><td>Pimcore</td><td>Open source, DAM-behov</td><td>Gratis (self-hosted)</td><td class="check">✓ Via API</td></tr>
+      <tr><td>Crystallize</td><td>Headless, API-first</td><td>2 000–20 000 kr</td><td class="check">✓ GraphQL</td></tr>
+      <tr><td>Plytix</td><td>SMB, enkel katalog</td><td>2 000–8 000 kr</td><td class="check">✓ App</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Våra PIM-tjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">📊</div><h3>PIM-implementation</h3><p>Konfiguration av Akeneo, Pimcore eller Crystallize med datamodell anpassad till er produktkatalog och branschkrav.</p></div>
+      <div class="svc"><div class="svc-icon">🔗</div><h3>Shopify & AC-integration</h3><p>Tvåvägsintegration mellan PIM och er e-handelsplattform – produkter, attribut, bilder och kategorier synkroniserade i realtid.</p></div>
+      <div class="svc"><div class="svc-icon">📥</div><h3>Dataimport & migrering</h3><p>Import av befintlig produktdata från Excel, ERP (Monitor, SAP) och leverantörsfiler (ETIM, BMEcat, Excel) till PIM.</p></div>
+      <div class="svc"><div class="svc-icon">🌍</div><h3>Flerspråkig produktdata</h3><p>Strukturera produktdata för nordisk och europeisk expansion med kanalspecifik lokalisering och översättningsarbetsflöde.</p></div>
+      <div class="svc"><div class="svc-icon">🖼️</div><h3>DAM & bildhantering</h3><p>Digital Asset Management integrerat i PIM för strukturerad bildhantering, automatisk formatering och CDN-distribution.</p></div>
+      <div class="svc"><div class="svc-icon">📡</div><h3>Omnichannel-distribution</h3><p>Distribuera produktdata från ett PIM till Shopify, Adobe Commerce, marknadsplatser (CDON, Amazon) och trycksaker.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8fafc">
+  <div class="container">
+    <h2>Vanliga frågor om PIM-system</h2>
+    <div class="faq">
+      <details><summary>Vad är ett PIM-system och varför behöver man det?</summary><div class="faq-body">PIM samlar, berikar och distribuerar produktinformation till alla kanaler. Lönar sig vid 1 000+ produkter eller 2+ säljkanaler. Eliminerar inkonsekventa produktbeskrivningar och manuellt dubbelarbete.</div></details>
+      <details><summary>Vilka PIM-system passar för svenska e-handlare?</summary><div class="faq-body">Akeneo Community Edition (gratis) eller Growth (30 000–60 000 kr/mån) för de flesta. Pimcore (open source) vid starkt DAM-behov. Crystallize för API-first headless. inriver för enterprise (50 000+ kr/mån).</div></details>
+      <details><summary>Hur integrerar PIM med Shopify och Adobe Commerce?</summary><div class="faq-body">Via API – Akeneo har officiella connectorer för Shopify och Adobe Commerce. Synkroniserar attribut, kategorier, bilder och kanaldata. Schemalagd eller webhook-baserad synk.</div></details>
+      <details><summary>Vad är skillnaden mellan PIM och ERP?</summary><div class="faq-body">ERP hanterar affärsdata (priser, lager, leverantörer). PIM hanterar marknadsdata (produktbeskrivningar, attribut, bilder, SEO). Informationsflöde: ERP → PIM → e-handelsplattform.</div></details>
+      <details><summary>Kan man använda PIM utan ERP?</summary><div class="faq-body">Ja. PIM och ERP är oberoende. Många importerar produktdata från Excel eller leverantörsfiler direkt till PIM. PIM kan vara primär produktkälla utan ERP.</div></details>
+      <details><summary>Vad kostar PIM-implementation?</summary><div class="faq-body">Licensier: Akeneo Community gratis – inriver 50 000+ kr/mån. Implementation: 150 000–600 000 kr beroende på katalogstorlek. 8–20 veckors projekt. ROI inom 6–18 månader.</div></details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">PIM-integrations-expert sedan 2016</h2>
+    <p>Niklas Dahlquist och teamet på Dahlquist har implementerat PIM-system för svenska och nordiska e-handlare med komplexa produktkataloger. Vi integrerar Akeneo, Pimcore och Crystallize mot Shopify och Adobe Commerce.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Akeneo Partner</span><span class="badge">Shopify Plus Partner</span><span class="badge">Adobe Commerce Partner</span><span class="badge">10+ PIM-projekt</span>
+    </div>
+    <div class="clients"><span class="client-tag">STIHL</span><span class="client-tag">SONAX</span><span class="client-tag">Arrak Outdoor</span></div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/e-handel-konsult" style="color:#7eb3f5">Läs mer på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – PIM-system Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

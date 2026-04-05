@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magento E-handel Sverige – Bygg och optimera med Magento | Dahlquist</title>
+  <meta name="description" content="Magento e-handel för svenska företag. Dahlquist bygger, migrerar och optimerar Magento 2 och Adobe Commerce för B2B och B2C. ERP-integration och Hyva Theme." />
+  <link rel="canonical" href="https://magento-ehandel.se/" />
+  <meta property="og:title" content="Magento E-handel Sverige – Dahlquist" />
+  <meta property="og:description" content="Magento-specialister för svenska e-handlare. Vi bygger Magento 2 och Adobe Commerce med Hyva Theme, ERP-integration och B2B-funktioner." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta name="author" content="Dahlquist E-handelskonsulter AB" />
+  <script type="application/ld+json">
+  [
+    {"@context":"https://schema.org","@type":"WebPage","name":"Magento E-handel Sverige – Dahlquist","description":"Magento-specialister för svenska e-handlare sedan 2016.","url":"https://magento-ehandel.se/","datePublished":"2026-04-05","dateModified":"2026-04-05","inLanguage":"sv-SE","author":{"@type":"Person","name":"Niklas Dahlquist"},"publisher":{"@type":"Organization","name":"Dahlquist E-handelskonsulter AB","url":"https://dahlquist.se"}},
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hem","item":"https://magento-ehandel.se/"},{"@type":"ListItem","position":2,"name":"Magento E-handel","item":"https://magento-ehandel.se/"}]}
+  ]
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Vad är Magento e-handel?","acceptedAnswer":{"@type":"Answer","text":"Magento (Adobe Commerce) är en öppen källkodsbaserad e-handelsplattform byggd i PHP. Den är känd för sin obegränsade flexibilitet, kraftfulla B2B-funktioner och djupa anpassningsmöjligheter. Magento passar bäst för medelstora och stora e-handlare med komplex produktkatalog eller avancerade B2B-krav."}},
+      {"@type":"Question","name":"Är Magento rätt plattform för mig?","acceptedAnswer":{"@type":"Answer","text":"Magento är rätt om du har: komplex produktkatalog (tusentals produkter med avancerade attribut), avancerade B2B-krav (kundspecifik prissättning, PunchOut), djupa ERP-integrationsbehov, eller behov av full kontroll över plattformen. Om du är B2C med enklare krav kan Shopify vara bättre."}},
+      {"@type":"Question","name":"Vad kostar Magento e-handel?","acceptedAnswer":{"@type":"Answer","text":"Magento Open Source är gratis men kräver hosting (2 000–15 000 kr/mån), development och underhåll. En ny Magento-butik kostar typiskt 400 000–1 500 000 kr att bygga. Adobe Commerce Cloud kostar dessutom 1,8–10 MSEK/år i licens. Kontakta Dahlquist för en kostnadsbild baserad på er situation."}},
+      {"@type":"Question","name":"Vad är Hyva Theme för Magento?","acceptedAnswer":{"@type":"Answer","text":"Hyva Theme är ett modernt frontend-ramverk för Magento 2 byggt på Tailwind CSS och Alpine.js. Det ersätter standardtemat Luma och ger dramatiskt bättre Core Web Vitals — typiskt 3–5x snabbare sidladdning. Hyva är det rekommenderade temat för alla nya Magento-projekt 2024-2026."}},
+      {"@type":"Question","name":"Kan man migrera från WooCommerce till Magento?","acceptedAnswer":{"@type":"Answer","text":"Ja. Dahlquist genomför migrationer från WooCommerce till Magento 2 med överföring av produkter, kunder, orderhistorik och SEO-omdirigering. Migrationen tar typiskt 2–4 månader beroende på katalogens storlek och antal anpassningar."}},
+      {"@type":"Question","name":"Hur fungerar Magento med svenska affärssystem?","acceptedAnswer":{"@type":"Answer","text":"Dahlquist har genomfört Magento-integrationer mot Fortnox, Visma, Business Central, Jeeves, Garp och SAP. Vi synkroniserar order, lager, produktdata och kunddata i realtid eller batch beroende på affärsbehov."}}
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.65; }
+    a { color: #eb1000; text-decoration: none; } a:hover { text-decoration: underline; }
+    .header { background: #eb1000; color: #fff; padding: 1rem 2rem; }
+    .header h1 { font-size: 1.1rem; font-weight: 600; }
+    .hero { background: linear-gradient(135deg, #fff2f0 0%, #ffe4e1 100%); padding: 4rem 2rem; text-align: center; }
+    .hero h2 { font-size: 2.5rem; font-weight: 800; color: #eb1000; margin-bottom: 1rem; line-height: 1.2; }
+    .hero p { font-size: 1.2rem; color: #444; max-width: 680px; margin: 0 auto 2rem; }
+    .cta-btn { display: inline-block; background: #eb1000; color: #fff; padding: 1rem 2.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; }
+    .cta-btn:hover { background: #b50d00; text-decoration: none; }
+    .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1.5rem 2rem; background: #fff; border-bottom: 1px solid #fcd0cc; }
+    .badge-item { background: #fff2f0; border: 1px solid #fcd0cc; border-radius: 6px; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: #eb1000; }
+    .main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section { margin-bottom: 3rem; }
+    .section h3 { font-size: 1.5rem; font-weight: 700; color: #eb1000; margin-bottom: 1rem; border-left: 4px solid #eb1000; padding-left: 0.75rem; }
+    .section p { color: #444; margin-bottom: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .card { background: #fff2f0; border: 1px solid #fcd0cc; border-radius: 8px; padding: 1.5rem; }
+    .card h4 { font-size: 1.05rem; font-weight: 700; color: #eb1000; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.95rem; color: #555; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.95rem; }
+    .compare-table th { background: #eb1000; color: #fff; padding: 0.75rem 1rem; text-align: left; }
+    .compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; color: #444; }
+    .compare-table tr:nth-child(even) td { background: #fff2f0; }
+    .stat-row { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 2rem 0; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 2.5rem; font-weight: 800; color: #eb1000; }
+    .stat .label { font-size: 0.9rem; color: #666; }
+    .steps { counter-reset: step; list-style: none; margin-top: 1rem; }
+    .steps li { counter-increment: step; padding: 1rem 1rem 1rem 3.5rem; border-bottom: 1px solid #eee; position: relative; color: #444; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0.9rem; width: 2rem; height: 2rem; background: #eb1000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+    .faq-section { margin-bottom: 3rem; }
+    .faq-section h3 { font-size: 1.5rem; font-weight: 700; color: #eb1000; margin-bottom: 1.5rem; border-left: 4px solid #eb1000; padding-left: 0.75rem; }
+    .faq-item { border-bottom: 1px solid #eee; padding: 1.25rem 0; }
+    .faq-item h4 { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.5rem; }
+    .faq-item p { color: #555; font-size: 0.95rem; }
+    .link-section { background: #eb1000; color: #fff; padding: 3rem 2rem; text-align: center; }
+    .link-section h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
+    .link-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .link-section a { background: #fff; color: #eb1000; padding: 1rem 2.5rem; border-radius: 6px; font-size: 1.1rem; font-weight: 700; display: inline-block; }
+    .link-section a:hover { background: #fff2f0; text-decoration: none; }
+    .footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; }
+    @media (max-width: 600px) { .hero h2 { font-size: 1.8rem; } }
+  </style>
+</head>
+<body>
+  <header class="header"><h1>Magento E-handel Sverige</h1></header>
+  <section class="hero">
+    <h2>Magento e-handel med Hyva &amp; ERP</h2>
+    <p>Vi bygger och optimerar Magento 2 och Adobe Commerce för svenska e-handlare — med Hyva Theme för prestanda, djup ERP-integration och avancerad B2B-funktionalitet.</p>
+    <a href="https://dahlquist.se/magento" class="cta-btn">Diskutera Magento-projekt</a>
+  </section>
+  <div class="badges">
+    <span class="badge-item">Adobe Commerce Specialist</span>
+    <span class="badge-item">Hyva Theme</span>
+    <span class="badge-item">ERP-integration</span>
+    <span class="badge-item">B2B e-handel</span>
+    <span class="badge-item">Sedan 2016</span>
+  </div>
+  <main class="main">
+    <article>
+      <section class="section">
+        <div class="stat-row">
+          <div class="stat"><div class="num">150+</div><div class="label">Projekt</div></div>
+          <div class="stat"><div class="num">3x</div><div class="label">Snabbare med Hyva</div></div>
+          <div class="stat"><div class="num">M1→M2</div><div class="label">Migration</div></div>
+          <div class="stat"><div class="num">7+</div><div class="label">ERP-system</div></div>
+        </div>
+      </section>
+      <section class="section">
+        <h3>Magento — plattformen för komplex e-handel</h3>
+        <p>Magento (Adobe Commerce) är rätt val när din e-handel ställer krav som Shopify inte kan möta: komplex B2B med kundspecifik prissättning och PunchOut, tusentals produkter med avancerade attribut, djup integration mot affärssystem, eller behov av total kontroll över plattformens beteende.</p>
+        <p>Dahlquist E-handelskonsulter har arbetat med Magento sedan 2016 och följt plattformens evolution från Magento 1 till dagens Adobe Commerce Cloud. Vi har djup teknisk kompetens i PHP-modulutveckling, EAV-datamodellen och Hyva Theme.</p>
+        <p>Bland våra Magento-kunder finns <strong>STIHL</strong>, <strong>SONAX</strong> och <strong>Arrak Outdoor</strong> — varumärken med komplexa B2B-krav och avancerade ERP-integrationer.</p>
+      </section>
+      <section class="section">
+        <h3>Magento vs. Shopify — när väljer man Magento?</h3>
+        <table class="compare-table">
+          <tr><th>Välj Magento om du har...</th><th>Välj Shopify Plus om du har...</th></tr>
+          <tr><td>Komplex B2B med PunchOut</td><td>Enklare B2B utan inköpssystem</td></tr>
+          <tr><td>Tusentals produkter med avancerade attribut</td><td>Enklare produktkatalog</td></tr>
+          <tr><td>Djup ERP-integration som kräver full kontroll</td><td>Standard ERP-integration via appar</td></tr>
+          <tr><td>Behov av custom PHP-logik</td><td>Standard checkout-flöde</td></tr>
+          <tr><td>Befintlig Magento 1-plattform att migrera</td><td>Ny e-handel utan legacy</td></tr>
+          <tr><td>Enterprise med Adobe Suite-integration</td><td>Growth-bolag med snabb lansering</td></tr>
+        </table>
+      </section>
+      <section class="section">
+        <h3>Vad vi bygger i Magento</h3>
+        <div class="grid">
+          <div class="card"><h4>Magento med Hyva Theme</h4><p>Snabba, moderna Magento-butiker med Hyva Theme (Tailwind + Alpine.js) — 3–5x bättre Core Web Vitals jämfört med Luma.</p></div>
+          <div class="card"><h4>Adobe Commerce B2B</h4><p>Kundkonton, prislistor, offertar, godkännandeflöden och PunchOut-integration mot SAP Ariba och Coupa.</p></div>
+          <div class="card"><h4>ERP-integration</h4><p>Realtidssynkronisering mot Business Central, SAP, Visma, Fortnox och Jeeves med robust felhantering.</p></div>
+          <div class="card"><h4>Magento-migration</h4><p>Migration från Magento 1, WooCommerce eller annan plattform med full dataöverföring och SEO-omdirigering.</p></div>
+          <div class="card"><h4>Prestandaoptimering</h4><p>Varnish, Redis, Elasticsearch-optimering och Hyva-migrering för dramatiskt snabbare Magento-butiker.</p></div>
+          <div class="card"><h4>Adobe Commerce Cloud</h4><p>Setup, CI/CD och drift av Adobe Commerce Cloud med Fastly CDN och staging-pipelines.</p></div>
+        </div>
+      </section>
+      <section class="faq-section">
+        <h3>Vanliga frågor om Magento e-handel</h3>
+        <div class="faq-item"><h4>Vad är Magento e-handel?</h4><p>Magento (Adobe Commerce) är en flexibel e-handelsplattform byggd i PHP. Den passar bäst för medelstora och stora e-handlare med komplex produktkatalog eller avancerade B2B-krav.</p></div>
+        <div class="faq-item"><h4>Är Magento rätt plattform för mig?</h4><p>Magento är rätt om du har komplex B2B, avancerade ERP-integrationsbehov eller behov av total kontroll. Om du är B2C med enklare krav kan Shopify vara bättre.</p></div>
+        <div class="faq-item"><h4>Vad är Hyva Theme för Magento?</h4><p>Hyva Theme är ett modernt Magento 2-tema byggt på Tailwind CSS och Alpine.js som ger 3–5x bättre Core Web Vitals jämfört med standardtemat Luma.</p></div>
+        <div class="faq-item"><h4>Vad kostar Magento e-handel?</h4><p>Magento Open Source är gratis men kräver hosting och development. En ny Magento-butik kostar typiskt 400 000–1 500 000 kr att bygga.</p></div>
+        <div class="faq-item"><h4>Kan man migrera från WooCommerce till Magento?</h4><p>Ja. Dahlquist genomför migrationer med överföring av produkter, kunder, orderhistorik och SEO-omdirigering. Tar typiskt 2–4 månader.</p></div>
+        <div class="faq-item"><h4>Hur fungerar Magento med svenska affärssystem?</h4><p>Dahlquist har genomfört Magento-integrationer mot Fortnox, Visma, Business Central, Jeeves, Garp och SAP med realtidssynkronisering av order och lager.</p></div>
+      </section>
+    </article>
+  </main>
+  <section class="link-section">
+    <h3>Magento-projekt på gång?</h3>
+    <p>Boka ett kostnadsfritt möte med våra Magento-specialister.</p>
+    <a href="https://dahlquist.se/magento">Kontakta Dahlquist Magento &rarr;</a>
+  </section>
+  <section style="background:#fff2f0;border-top:3px solid #eb1000;padding:2.5rem 2rem;">
+    <div style="max-width:900px;margin:0 auto;">
+      <h2 style="font-size:1.1rem;font-weight:700;color:#eb1000;margin-bottom:0.75rem;">Om Dahlquist E-handelskonsulter AB</h2>
+      <p style="color:#555;font-size:0.95rem;line-height:1.65;margin-bottom:0.5rem;">Grundades 2016 av <strong>Niklas Dahlquist</strong>. Adobe Commerce och Magento-specialister med 150+ projekt för kunder som STIHL, SONAX och Arrak Outdoor.</p>
+      <p style="color:#888;font-size:0.85rem;margin-top:1rem;">Senast uppdaterad: 5 april 2026 &middot; <a href="https://dahlquist.se" style="color:#eb1000;">dahlquist.se</a></p>
+    </div>
+  </section>
+  <footer class="footer"><p>En sajt av <a href="https://dahlquist.se">Dahlquist E-handelskonsulter AB</a> &mdash; Magento-specialister sedan 2016</p></footer>
+</body>
+</html>
