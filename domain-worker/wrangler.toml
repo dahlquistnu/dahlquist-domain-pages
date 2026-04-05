@@ -1,0 +1,86 @@
+name = "dahlquist-domain-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+account_id = "b1bff745b75f466e258f2df9b4c2e1fb"
+
+# shopifyexperter.se — zone: c30a05b75f75948012471d3f77e2bb13
+[[routes]]
+pattern = "shopifyexperter.se/*"
+zone_id = "c30a05b75f75948012471d3f77e2bb13"
+
+[[routes]]
+pattern = "www.shopifyexperter.se/*"
+zone_id = "c30a05b75f75948012471d3f77e2bb13"
+
+# shopifybyrå.se — zone: cacd850151721cdda3279e32a1b7da4f
+[[routes]]
+pattern = "xn--shopifybyr-b6a.se/*"
+zone_id = "cacd850151721cdda3279e32a1b7da4f"
+
+[[routes]]
+pattern = "www.xn--shopifybyr-b6a.se/*"
+zone_id = "cacd850151721cdda3279e32a1b7da4f"
+
+# shopifykonsulter.se — zone: cf2832fba69ab9d801a0cfcfa75839d2
+[[routes]]
+pattern = "shopifykonsulter.se/*"
+zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
+
+[[routes]]
+pattern = "www.shopifykonsulter.se/*"
+zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
+
+# magentoexperten.se — zone: 36232f0ebc1401a0ed138ac4bd84ba3a
+[[routes]]
+pattern = "magentoexperten.se/*"
+zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
+
+[[routes]]
+pattern = "www.magentoexperten.se/*"
+zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
+
+# magento-konsulter.se — zone: d655ff791416deecc9ed8abd4512f39a
+[[routes]]
+pattern = "magento-konsulter.se/*"
+zone_id = "d655ff791416deecc9ed8abd4512f39a"
+
+[[routes]]
+pattern = "www.magento-konsulter.se/*"
+zone_id = "d655ff791416deecc9ed8abd4512f39a"
+
+# adobecommerce.se — zone: af1bfc3a15520a4a749e3da2e3866cfe
+[[routes]]
+pattern = "adobecommerce.se/*"
+zone_id = "af1bfc3a15520a4a749e3da2e3866cfe"
+
+[[routes]]
+pattern = "www.adobecommerce.se/*"
+zone_id = "af1bfc3a15520a4a749e3da2e3866cfe"
+
+# ehandelkonsult.se — zone: ddd93aa784cad9ec2d9afe50f128206e
+[[routes]]
+pattern = "ehandelkonsult.se/*"
+zone_id = "ddd93aa784cad9ec2d9afe50f128206e"
+
+[[routes]]
+pattern = "www.ehandelkonsult.se/*"
+zone_id = "ddd93aa784cad9ec2d9afe50f128206e"
+
+# klaviyo.se — zone: 7c7280fbb2fc66baee09c6e1e7156034
+[[routes]]
+pattern = "klaviyo.se/*"
+zone_id = "7c7280fbb2fc66baee09c6e1e7156034"
+
+[[routes]]
+pattern = "www.klaviyo.se/*"
+zone_id = "7c7280fbb2fc66baee09c6e1e7156034"
+
+# punchout.nu — zone: 84f92a5b96a6f1595dabbed85bdca0cb
+[[routes]]
+pattern = "punchout.nu/*"
+zone_id = "84f92a5b96a6f1595dabbed85bdca0cb"
+
+[[routes]]
+pattern = "www.punchout.nu/*"
+zone_id = "84f92a5b96a6f1595dabbed85bdca0cb"
