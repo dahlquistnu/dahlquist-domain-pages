@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Sverige | Guide för svenska e-handlare — Shopify på svenska</title>
+<meta name="description" content="Komplett guide till Shopify i Sverige. Shopify på svenska, svenska betalningar (Klarna, Swish), moms, partners och allt du behöver för att lyckas med Shopify som svensk e-handlare.">
+<link rel="canonical" href="https://shopifysverige.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Shopify Sverige",
+  "description": "Guide och experthjälp för svenska Shopify-handlare. Shopify på svenska, lokala betalningar och certifierade svenska Shopify-partners.",
+  "url": "https://shopifysverige.com/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Finns Shopify på svenska?","acceptedAnswer": {"@type": "Answer","text": "Ja, Shopify har stöd för svenska som administrativt gränssnitt sedan 2019. Du kan hantera din butik, produkter och ordrar helt på svenska. Butiksfronten kan också presenteras på svenska med Shopifys inbyggda flerspråksstöd. Shopify Markets gör det möjligt att sälja i flera länder med lokaliserat innehåll, inklusive svenska, norska, danska och finska."}},
+    {"@type": "Question","name": "Hur fungerar Klarna och Swish i Shopify?","acceptedAnswer": {"@type": "Answer","text": "Klarna erbjuder en officiell Shopify-integration som ger dina kunder möjlighet att betala med faktura, delbetalning och köp nu betala sen direkt i Shopify-checkouten. Swish kan integreras via tredjeparts-appar i Shopify App Store. Kom ihåg att Shopify Payments inte är tillgängligt i Sverige — du behöver en extern betalningslösning som Klarna Payments, Nets, Adyen eller Stripe."}},
+    {"@type": "Question","name": "Hur hanterar man svensk moms i Shopify?","acceptedAnswer": {"@type": "Answer","text": "Shopify har stöd för svensk moms via inställningarna för skatter och avgifter. Du kan konfigurera 25% standardmoms samt de reducerade satserna (12% för livsmedel och 6% för böcker och media). Det är viktigt att kontrollera att dina skatteinställningar är korrekt konfigurerade och att du har rätt fakturainformation på dina orderbekräftelser för att uppfylla Skatteverkets krav."}},
+    {"@type": "Question","name": "Vilken Shopify-plan passar svenska SME-företag?","acceptedAnswer": {"@type": "Answer","text": "För de flesta svenska småföretag (upp till 5 MSEK omsättning) räcker Shopify Basic. Shopify Standard (tidigare Shopify) är lämplig vid 5–20 MSEK med behov av bättre rapportering. Shopify Advanced passar 20–50 MSEK. Shopify Plus är motiverat vid 50+ MSEK eller vid behov av avancerad B2B, anpassad checkout och Shopify Flow-automatisering."}},
+    {"@type": "Question","name": "Hur väljer man rätt Shopify-partner i Sverige?","acceptedAnswer": {"@type": "Answer","text": "Sök efter byråer med officiell Shopify Partner-status på partners.shopify.com. Filtrera på Sverige och läs case studies noggrant. En bra svensk Shopify-partner förstår den lokala marknaden: svenska konsumentbeteenden, lokala betalningslösningar (Klarna, Swish), fraktintegration (PostNord, DB Schenker) och GDPR-compliance. Be alltid om referens från minst tre liknande projekt."}},
+    {"@type": "Question","name": "Kan man migrera från WooCommerce till Shopify?","acceptedAnswer": {"@type": "Answer","text": "Ja, migrering från WooCommerce till Shopify är en vanlig och väldokumenterad process. Produkter, kunder och orderhistorik kan exporteras via WooCommerces exportfunktion och importeras till Shopify. URL-omdirigeringar är kritiska för att bevara SEO-värde. En erfaren Shopify-partner kan genomföra en migrering utan synlig rankingnedgång om processen planeras noggrant."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#0057b8;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#0057b8 0%,#003d82 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#0057b8;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#f0f6ff;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#0057b8;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #dde8f5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(0,87,184,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #dde8f5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#0057b8}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#f0f6ff;border:1px solid #b3d0f5;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#0057b8}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px}
+  .info-box{background:#f0f6ff;border-radius:10px;padding:24px}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://shopifysverige.com/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Shopify Sverige | Guide för svenska e-handlare — Shopify på svenska" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="Komplett guide till Shopify i Sverige. Shopify på svenska, svenska betalningar (Klarna, Swish), moms, partners och allt du behöver för att lyckas med Shopify som svensk e-handlare." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopify Sverige | Guide för svenska e-handlare — Shopify på svenska" />
+  <meta name="twitter:description" content="Komplett guide till Shopify i Sverige. Shopify på svenska, svenska betalningar (Klarna, Swish), moms, partners och allt du behöver för att lyckas med Shopify som svensk e-handlare." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>Shopify Sverige — Din guide till svensk e-handel</h1>
+    <p>Allt du behöver veta om Shopify som svensk e-handlare. Svenska betalningar, moms, partners och experthjälp för att bygga och skala din butik på den svenska marknaden.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Prata med en svensk Shopify-expert</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Shopify på den svenska marknaden</h2>
+    <p class="lead">Shopify är idag en av de dominerande e-handelsplattformarna i Sverige med tusentals aktiva svenska butiker. Plattformen erbjuder allt en svensk e-handlare behöver — men det finns viktiga lokala anpassningar att känna till.</p>
+    <p>Sverige är en av Europas mest mogna e-handelsmarknader med hög digital penetration och konsumenter som förväntar sig smidiga betalningsupplevelser via Klarna och Swish, snabba leveranser och tydlig GDPR-hantering. En svensk Shopify-butik som inte är optimerad för dessa förväntningar tappar konverteringar.</p>
+    <p style="margin-top:16px">Den goda nyheten: Shopify är en utmärkt plattform för svenska e-handlare om den konfigureras rätt. Med rätt partner och rätt setup kan du driva en world-class e-handel med en stark lokal anpassning.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">5 000+</div><div class="stat-label">Svenska Shopify-butiker</div></div>
+      <div><div class="stat-num">85%</div><div class="stat-label">Av svenska köp via mobil</div></div>
+      <div><div class="stat-num">4 av 5</div><div class="stat-label">Kunder vill betala med Klarna</div></div>
+      <div><div class="stat-num">10 år</div><div class="stat-label">Vår Shopify-erfarenhet</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8faff">
+  <div class="container">
+    <h2>Shopify i Sverige — Det du behöver anpassa</h2>
+    <p class="lead">Dessa sex anpassningar är avgörande för en framgångsrik Shopify-butik på den svenska marknaden.</p>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">💳</div><h3>Klarna och Swish</h3><p>Shopify Payments är inte tillgängligt i Sverige. Du behöver integrera Klarna (faktura, delbetalning, kort) och Swish för att möta svenska konsumenters betalningsförväntningar. Utan dessa förlorar du upp till 40% av potentiella köp.</p></div>
+      <div class="svc"><div class="svc-icon">📦</div><h3>Fraktlösningar</h3><p>Integrera PostNord, DHL, DB Schenker och Budbee direkt i Shopify. Svenska konsumenter förväntar sig spårning i realtid, flexibla utlämningsalternativ och fri frakt vid köp över ett visst belopp. Konfigurera fraktzoner och villkor noggrant.</p></div>
+      <div class="svc"><div class="svc-icon">🧾</div><h3>Svensk moms och fakturor</h3><p>Konfigurera svenska momssatser (25%, 12%, 6%) korrekt och se till att dina orderbekräftelser uppfyller Skatteverkets krav på fakturainnehåll. Om du säljer B2B behöver du hantera omvänd skattskyldighet korrekt.</p></div>
+      <div class="svc"><div class="svc-icon">🔒</div><h3>GDPR och cookies</h3><p>Svenska e-handlare måste följa GDPR och svensk integritetslag. Konfigurera cookie-banner, hantera samtycken korrekt och se till att dina dataskyddspolicys är uppdaterade. Shopify har inbyggda verktyg för GDPR-compliance.</p></div>
+      <div class="svc"><div class="svc-icon">🌐</div><h3>Svenska produkttexter och SEO</h3><p>Google rangordnar innehåll på rätt språk. Skriv produkttexter, kategoribeskrivningar och metatexter på svenska. Använd svenska sökord som matchar hur svenska konsumenter faktiskt söker — inte direktöversättningar från engelska.</p></div>
+      <div class="svc"><div class="svc-icon">📊</div><h3>Bokföring och affärssystem</h3><p>Integrera Shopify med Fortnox, Visma, Monitor eller ditt WMS för att automatisera bokföring, lagerhantering och fakturering. Manuell hantering av ordrar skapar flaskhalsar och fel vid tillväxt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Svenska Shopify-partners att känna till</h2>
+    <p class="lead">Det finns ett fåtal genuint starka Shopify-partners i Sverige med dokumenterad erfarenhet av den svenska marknaden. Så här hittar du rätt.</p>
+    <div class="info-grid">
+      <div class="info-box"><h3>Vad är en officiell Shopify Partner?</h3><p>En officiell Shopify Partner är en byrå eller individ registrerad i Shopifys partnerprogram. De kan bygga butiker, teman och appar. Shopify Plus Partners är en mer exklusiv nivå för byråer med dokumenterade Shopify Plus-implementationer och specifika certifieringar.</p></div>
+      <div class="info-box"><h3>Hur hittar du svenska Shopify-partners?</h3><p>Sök på partners.shopify.com och filtrera på Sverige. Du kan även söka på Shopify Experts Marketplace för frilansare och specialister. Kontrollera alltid case studies och be om references från liknande projekt inom din bransch.</p></div>
+      <div class="info-box"><h3>Vad ska en bra partner leverera?</h3><p>En bra Shopify-partner levererar teknisk kvalitet, affärsförståelse och proaktiv rådgivning. De ska kunna din bransch, förstå den svenska konsumenten och ha konkreta siffror på resultat från tidigare projekt — konverteringsgrad, sidladdningstid och omsättningstillväxt.</p></div>
+      <div class="info-box"><h3>Varningssignaler att undvika</h3><p>Undvik byråer som lovar garanterade placeringar i Google, erbjuder orealistiskt låga priser utan tydligt scope, inte kan visa referenscase eller väljer Shopify-plan utan att förstå din verksamhet. En seriös partner ställer alltid många frågor innan de offerterar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8faff">
+  <div class="container">
+    <h2>Vanliga frågor om Shopify i Sverige</h2>
+    <div class="faq">
+      <details>
+        <summary>Finns Shopify på svenska?</summary>
+        <div class="faq-body">Ja, Shopify har stöd för svenska som administrativt gränssnitt sedan 2019. Du kan hantera din butik, produkter och ordrar helt på svenska. Butiksfronten kan också presenteras på svenska med Shopifys inbyggda flerspråksstöd. Shopify Markets gör det möjligt att sälja i flera länder med lokaliserat innehåll.</div>
+      </details>
+      <details>
+        <summary>Hur fungerar Klarna och Swish i Shopify?</summary>
+        <div class="faq-body">Klarna erbjuder en officiell Shopify-integration för faktura, delbetalning och kort direkt i checkouten. Swish kan integreras via tredjeparts-appar. Shopify Payments är inte tillgängligt i Sverige — du behöver en extern betalningslösning som Klarna, Nets, Adyen eller Stripe.</div>
+      </details>
+      <details>
+        <summary>Hur hanterar man svensk moms i Shopify?</summary>
+        <div class="faq-body">Shopify har stöd för svensk moms via skatte- och avgiftsinställningarna. Du konfigurerar 25% standardmoms samt reducerade satser (12% för livsmedel och 6% för böcker och media). Kontrollera att dina orderbekräftelser uppfyller Skatteverkets krav på fakturainnehåll.</div>
+      </details>
+      <details>
+        <summary>Vilken Shopify-plan passar svenska SME-företag?</summary>
+        <div class="faq-body">För de flesta svenska småföretag (upp till 5 MSEK omsättning) räcker Shopify Basic. Shopify Standard passar vid 5–20 MSEK. Shopify Advanced passar 20–50 MSEK. Shopify Plus är motiverat vid 50+ MSEK eller vid behov av avancerad B2B och automatisering.</div>
+      </details>
+      <details>
+        <summary>Hur väljer man rätt Shopify-partner i Sverige?</summary>
+        <div class="faq-body">Sök efter byråer med officiell Shopify Partner-status på partners.shopify.com. En bra svensk Shopify-partner förstår lokala betalningslösningar (Klarna, Swish), fraktintegration (PostNord, DB Schenker) och GDPR-compliance. Be alltid om referens från minst tre liknande projekt.</div>
+      </details>
+      <details>
+        <summary>Kan man migrera från WooCommerce till Shopify?</summary>
+        <div class="faq-body">Ja, migrering från WooCommerce till Shopify är en vanlig och väldokumenterad process. Produkter, kunder och orderhistorik kan exporteras och importeras. URL-omdirigeringar är kritiska för att bevara SEO-värde. En erfaren Shopify-partner kan genomföra migreringen utan synlig rankingnedgång.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">Svensk Shopify-expert med 10 års erfarenhet</h2>
+    <p>Niklas Dahlquist och teamet på Dahlquist har hjälpt svenska e-handlare att lyckas med Shopify sedan 2016. Vi förstår den svenska marknaden — betalningar, logistik, konsumentbeteende och regulatoriska krav — och kan anpassa din Shopify-butik för att maximera försäljning i Sverige och Norden.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Shopify Partner</span>
+      <span class="badge">Klarna-integration</span>
+      <span class="badge">Shopify Markets</span>
+      <span class="badge">GDPR-compliance</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/shopify-sverige" style="color:#7eb3f5">Läs mer om Shopify för svenska e-handlare på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – Shopify Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

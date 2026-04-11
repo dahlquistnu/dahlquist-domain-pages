@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify 360 | Komplett Shopify-lösning från setup till skalning</title>
+<meta name="description" content="Shopify 360 — en komplett lösning för svenska e-handlare. Från initial setup och temadesign till integrationer, optimering och löpande skalning. Certifierad Shopify-partner.">
+<link rel="canonical" href="https://shopify360.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Shopify 360 Sverige",
+  "description": "Komplett 360-graders Shopify-lösning för svenska e-handlare — setup, optimering och skalning.",
+  "url": "https://shopify360.se/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Vad innebär en Shopify 360-lösning?","acceptedAnswer": {"@type": "Answer","text": "En Shopify 360-lösning täcker hela livscykeln för din e-handel — från initial strategi och plattformsval, via design och teknisk implementation, till löpande optimering, marknadsföring och skalning. Istället för att anlita separata leverantörer för varje del får du en sammanhängande partner som tar ett helhetsansvar för din Shopify-verksamhet."}},
+    {"@type": "Question","name": "Vilka delar ingår i en fullständig Shopify-implementation?","acceptedAnswer": {"@type": "Answer","text": "En fullständig Shopify-implementation inkluderar: plattformsstrategi och planval, anpassad temadesign och UX, produktkatalog och lagerhantering, betalningslösningar (Klarna, Swish, kort), fraktintegrationer (PostNord, DHL, Budbee), ERP/WMS-integration, SEO-grundstruktur, analysspårning och konverteringsmätning, samt utbildning och dokumentation."}},
+    {"@type": "Question","name": "Hur lång tid tar det att bygga en komplett Shopify-butik?","acceptedAnswer": {"@type": "Answer","text": "Tidplanen beror på projektets komplexitet. En butik med befintligt tema och standardfunktionalitet kan lanseras på 4–6 veckor. En fullständig implementation med anpassat tema och flera integrationer tar 8–16 veckor. En Shopify Plus-implementation med B2B, ERP och anpassad checkout kan ta 16–24 veckor."}},
+    {"@type": "Question","name": "Vilka integrationer behöver en svensk Shopify-butik?","acceptedAnswer": {"@type": "Answer","text": "Typiska integrationer för svenska Shopify-butiker: Klarna för köp nu betala sen, Swish för direktbetalning, PostNord och DHL för frakt och spårning, Fortnox eller Monitor för bokföring och fakturahantering, ett PIM-system för produktinformation vid stora kataloger, samt Google Analytics 4 och Meta Pixel för marknadsföringsspårning."}},
+    {"@type": "Question","name": "Hur optimerar man en Shopify-butik för tillväxt?","acceptedAnswer": {"@type": "Answer","text": "Tillväxtoptimering av en Shopify-butik inkluderar konverteringsoptimering (CRO) via A/B-testning, SEO för organisk trafik, e-postautomatisering via Klaviyo eller Shopify Email, lojalitetsprogram, upsell och cross-sell vid checkout och i orderbekräftelse, samt datadriven produktkatalogoptimering baserat på försäljnings- och marginalmönster."}},
+    {"@type": "Question","name": "Vad ingår i löpande Shopify-förvaltning?","acceptedAnswer": {"@type": "Answer","text": "Löpande Shopify-förvaltning inkluderar typiskt: teknisk support och bugghantering, månadsvis prestandarapport, uppdateringar av tema och appar, säkerhetsövervakning, konverteringstestning, SEO-underhåll, integration av nya funktioner och rådgivning kring plattformsutveckling. En bra förvaltningspartner agerar proaktivt — inte enbart reaktivt."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#0057b8;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#0057b8 0%,#003d82 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#0057b8;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#f0f6ff;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#0057b8;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #dde8f5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(0,87,184,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #dde8f5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#0057b8}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#f0f6ff;border:1px solid #b3d0f5;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#0057b8}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .wheel{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:32px}
+  .wheel-item{background:#f0f6ff;border-radius:12px;padding:24px;text-align:center}
+  .wheel-num{font-size:1.8rem;font-weight:800;color:#0057b8;margin-bottom:8px}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://shopify360.se/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Shopify 360 | Komplett Shopify-lösning från setup till skalning" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="Shopify 360 — en komplett lösning för svenska e-handlare. Från initial setup och temadesign till integrationer, optimering och löpande skalning. Certifierad Shopify-partner." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopify 360 | Komplett Shopify-lösning från setup till skalning" />
+  <meta name="twitter:description" content="Shopify 360 — en komplett lösning för svenska e-handlare. Från initial setup och temadesign till integrationer, optimering och löpande skalning. Certifierad Shopify-partner." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>Shopify 360 — Komplett e-handelslösning</h1>
+    <p>Allt du behöver för en framgångsrik Shopify-butik samlat hos en partner. Från initial setup och strategi till optimering, integrationer och skalning mot nya marknader.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Starta ditt 360-projekt</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Vad är Shopify 360?</h2>
+    <p class="lead">Shopify 360 är ett holistiskt synsätt på e-handelsframgång. Istället för att hantera din butik som ett tekniskt projekt behandlar vi den som ett levande affärssystem som kräver strategi, teknik, design, marknadsföring och optimering i perfekt harmoni.</p>
+    <p>De flesta e-handlare stöter på samma problem: de anlitar en byrå för att bygga butiken, en annan för SEO, en tredje för betald annonsering och försöker sedan själva koordinera helheten. Resultatet är en fragmenterad upplevelse med otydliga ansvarsområden och suboptimerade resultat.</p>
+    <p style="margin-top:16px">Med en Shopify 360-approach får du en samlad partner som ansvarar för hela e-handelsresan — från dag ett till skalning mot 100 MSEK och bortom. Vi på Dahlquist har levererat 360-lösningar till e-handlare inom mode, sport, bygg och B2B-sektorn.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">360°</div><div class="stat-label">Täckning av hela e-handeln</div></div>
+      <div><div class="stat-num">12v</div><div class="stat-label">Genomsnittlig tid till lansering</div></div>
+      <div><div class="stat-num">3x</div><div class="stat-label">Omsättningstillväxt år 1</div></div>
+      <div><div class="stat-num">50+</div><div class="stat-label">Integrationer levererade</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8faff">
+  <div class="container">
+    <h2>De sex pelarna i en Shopify 360-lösning</h2>
+    <p class="lead">En komplett Shopify-lösning vilar på sex sammankopplade pelare. Brister i en pelare påverkar resultatet i alla övriga.</p>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">🎯</div><h3>Strategi och plattformsval</h3><p>Vi analyserar din verksamhet, dina konkurrenter och din tillväxtplan för att välja rätt Shopify-plan och teknikstack. Shopify Basic, Advanced eller Plus — beslutet baseras på data, inte säljargument.</p></div>
+      <div class="svc"><div class="svc-icon">🎨</div><h3>Design och konverteringsoptimerad UX</h3><p>Mobilfirst-design som konverterar besökare till kunder. Vi designar produktsidor, kategorilistningar, checkout och kampanjsidor utifrån beprövade e-handelsmönster och din varumärkesidentitet.</p></div>
+      <div class="svc"><div class="svc-icon">⚙️</div><h3>Teknisk implementation och integrationer</h3><p>Klarna, Swish, PostNord, DHL, Fortnox, Visma, ERP och PIM — vi integrerar alla system du behöver för en sömlös operationell verklighet bakom din vackra Shopify-butik.</p></div>
+      <div class="svc"><div class="svc-icon">📊</div><h3>Analytics och datadrivna beslut</h3><p>Vi sätter upp Google Analytics 4, Shopify Analytics, Meta Pixel och server-side tracking. Du ska alltid veta varifrån dina kunder kommer, vad de köper och varför de lämnar utan att köpa.</p></div>
+      <div class="svc"><div class="svc-icon">🚀</div><h3>SEO och organisk tillväxt</h3><p>Teknisk SEO, innehållsstrategi och länkbyggnad anpassad för Shopify. Vi optimerar din URL-struktur, produktbeskrivningar och kategorisidor för att generera organisk trafik utan återkommande annonskostnader.</p></div>
+      <div class="svc"><div class="svc-icon">📈</div><h3>Skalning och internationalisering</h3><p>När du är redo att växa utanför Sverige hjälper vi dig med Shopify Markets för nordisk och europeisk expansion, flerspråkiga butiker och lokaliserade betalningslösningar och skattehantering.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>360-graders leveransmodell</h2>
+    <p class="lead">Vår leveransmodell är uppdelad i tre faser som täcker hela livscykeln för din Shopify-butik.</p>
+    <div class="wheel">
+      <div class="wheel-item"><div class="wheel-num">Fas 1</div><h3>Bygg</h3><p>Strategi, design och teknisk implementation. Resultat: en lanserad Shopify-butik som fungerar perfekt på alla enheter.</p></div>
+      <div class="wheel-item"><div class="wheel-num">Fas 2</div><h3>Optimera</h3><p>Analytics-genomgång, A/B-testning, SEO och konverteringsoptimering. Resultat: ökad konverteringsgrad och lägre kostnad per order.</p></div>
+      <div class="wheel-item"><div class="wheel-num">Fas 3</div><h3>Skala</h3><p>Internationalisering, B2B-expansion, automatisering och Shopify Plus. Resultat: en plattform som hanterar din tillväxt utan att bromsa dig.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f8faff">
+  <div class="container">
+    <h2>Vanliga frågor om Shopify 360</h2>
+    <div class="faq">
+      <details>
+        <summary>Vad innebär en Shopify 360-lösning?</summary>
+        <div class="faq-body">En Shopify 360-lösning täcker hela livscykeln för din e-handel — från initial strategi och plattformsval, via design och teknisk implementation, till löpande optimering, marknadsföring och skalning. Istället för att anlita separata leverantörer för varje del får du en sammanhängande partner som tar ett helhetsansvar.</div>
+      </details>
+      <details>
+        <summary>Vilka delar ingår i en fullständig Shopify-implementation?</summary>
+        <div class="faq-body">En fullständig Shopify-implementation inkluderar: plattformsstrategi och planval, anpassad temadesign och UX, produktkatalog och lagerhantering, betalningslösningar (Klarna, Swish, kort), fraktintegrationer (PostNord, DHL, Budbee), ERP/WMS-integration, SEO-grundstruktur, analysspårning och utbildning.</div>
+      </details>
+      <details>
+        <summary>Hur lång tid tar det att bygga en komplett Shopify-butik?</summary>
+        <div class="faq-body">Tidplanen beror på projektets komplexitet. En butik med befintligt tema kan lanseras på 4–6 veckor. En implementation med anpassat tema och flera integrationer tar 8–16 veckor. En Shopify Plus-implementation med B2B och ERP kan ta 16–24 veckor.</div>
+      </details>
+      <details>
+        <summary>Vilka integrationer behöver en svensk Shopify-butik?</summary>
+        <div class="faq-body">Typiska integrationer: Klarna för köp nu betala sen, Swish för direktbetalning, PostNord och DHL för frakt och spårning, Fortnox eller Monitor för bokföring, samt Google Analytics 4 och Meta Pixel för marknadsföringsspårning.</div>
+      </details>
+      <details>
+        <summary>Hur optimerar man en Shopify-butik för tillväxt?</summary>
+        <div class="faq-body">Tillväxtoptimering inkluderar konverteringsoptimering via A/B-testning, SEO för organisk trafik, e-postautomatisering via Klaviyo, lojalitetsprogram, upsell och cross-sell vid checkout, samt datadriven produktkatalogoptimering baserat på försäljnings- och marginalmönster.</div>
+      </details>
+      <details>
+        <summary>Vad ingår i löpande Shopify-förvaltning?</summary>
+        <div class="faq-body">Löpande Shopify-förvaltning inkluderar: teknisk support och bugghantering, månadsvis prestandarapport, uppdateringar av tema och appar, säkerhetsövervakning, konverteringstestning, SEO-underhåll och rådgivning kring plattformsutveckling. En bra förvaltningspartner agerar proaktivt — inte enbart reaktivt.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">Din Shopify 360-partner i Sverige</h2>
+    <p>Dahlquist levererar kompletta Shopify-lösningar för svenska e-handlare som vill växa. Vi är certifierade Shopify-partners med djup erfarenhet av allt från startup-butiker till enterprise-implementationer med Shopify Plus.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Full-stack Shopify</span>
+      <span class="badge">Shopify Plus Partner</span>
+      <span class="badge">Shopify Markets</span>
+      <span class="badge">ERP-integration</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/shopify-360" style="color:#7eb3f5">Utforska vår Shopify 360-metodik på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – Shopify 360 Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

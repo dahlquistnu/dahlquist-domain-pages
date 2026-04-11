@@ -1,55 +1,9 @@
 name = "dahlquist-domain-worker"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
-
 account_id = "b1bff745b75f466e258f2df9b4c2e1fb"
 
-# shopifyexperter.se — zone: c30a05b75f75948012471d3f77e2bb13
-[[routes]]
-pattern = "shopifyexperter.se/*"
-zone_id = "c30a05b75f75948012471d3f77e2bb13"
-
-[[routes]]
-pattern = "www.shopifyexperter.se/*"
-zone_id = "c30a05b75f75948012471d3f77e2bb13"
-
-# shopifybyrå.se — zone: cacd850151721cdda3279e32a1b7da4f
-[[routes]]
-pattern = "xn--shopifybyr-b6a.se/*"
-zone_id = "cacd850151721cdda3279e32a1b7da4f"
-
-[[routes]]
-pattern = "www.xn--shopifybyr-b6a.se/*"
-zone_id = "cacd850151721cdda3279e32a1b7da4f"
-
-# shopifykonsulter.se — zone: cf2832fba69ab9d801a0cfcfa75839d2
-[[routes]]
-pattern = "shopifykonsulter.se/*"
-zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
-
-[[routes]]
-pattern = "www.shopifykonsulter.se/*"
-zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
-
-# magentoexperten.se — zone: 36232f0ebc1401a0ed138ac4bd84ba3a
-[[routes]]
-pattern = "magentoexperten.se/*"
-zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
-
-[[routes]]
-pattern = "www.magentoexperten.se/*"
-zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
-
-# magento-konsulter.se — zone: d655ff791416deecc9ed8abd4512f39a
-[[routes]]
-pattern = "magento-konsulter.se/*"
-zone_id = "d655ff791416deecc9ed8abd4512f39a"
-
-[[routes]]
-pattern = "www.magento-konsulter.se/*"
-zone_id = "d655ff791416deecc9ed8abd4512f39a"
-
-# adobecommerce.se — zone: af1bfc3a15520a4a749e3da2e3866cfe
+# adobecommerce.se
 [[routes]]
 pattern = "adobecommerce.se/*"
 zone_id = "af1bfc3a15520a4a749e3da2e3866cfe"
@@ -58,7 +12,70 @@ zone_id = "af1bfc3a15520a4a749e3da2e3866cfe"
 pattern = "www.adobecommerce.se/*"
 zone_id = "af1bfc3a15520a4a749e3da2e3866cfe"
 
-# ehandelkonsult.se — zone: ddd93aa784cad9ec2d9afe50f128206e
+# b2b-today.com
+[[routes]]
+pattern = "b2b-today.com/*"
+zone_id = "8acf35e505e37194a9ff7bf3ad95acc2"
+
+[[routes]]
+pattern = "www.b2b-today.com/*"
+zone_id = "8acf35e505e37194a9ff7bf3ad95acc2"
+
+# b2behandel.se
+[[routes]]
+pattern = "b2behandel.se/*"
+zone_id = "1b632d868622bf097638569a6afd9996"
+
+[[routes]]
+pattern = "www.b2behandel.se/*"
+zone_id = "1b632d868622bf097638569a6afd9996"
+
+# centrumhandel.se
+[[routes]]
+pattern = "centrumhandel.se/*"
+zone_id = "6c3474c449e38b3a2523bae7bcdd411b"
+
+[[routes]]
+pattern = "www.centrumhandel.se/*"
+zone_id = "6c3474c449e38b3a2523bae7bcdd411b"
+
+# digitalhandel.nu
+[[routes]]
+pattern = "digitalhandel.nu/*"
+zone_id = "39d551ac6df4b3f33fd6a6ffd30239ef"
+
+[[routes]]
+pattern = "www.digitalhandel.nu/*"
+zone_id = "39d551ac6df4b3f33fd6a6ffd30239ef"
+
+# e-handelsystem.se
+[[routes]]
+pattern = "e-handelsystem.se/*"
+zone_id = "45830d04cbd35c873743347774ffcd65"
+
+[[routes]]
+pattern = "www.e-handelsystem.se/*"
+zone_id = "45830d04cbd35c873743347774ffcd65"
+
+# ecomeagency.se
+[[routes]]
+pattern = "ecomeagency.se/*"
+zone_id = "08ac9a9c562ba7cd0925874117438364"
+
+[[routes]]
+pattern = "www.ecomeagency.se/*"
+zone_id = "08ac9a9c562ba7cd0925874117438364"
+
+# ehandelinstitutet.se
+[[routes]]
+pattern = "ehandelinstitutet.se/*"
+zone_id = "a316c58e77f48017f247be3573c0f8d1"
+
+[[routes]]
+pattern = "www.ehandelinstitutet.se/*"
+zone_id = "a316c58e77f48017f247be3573c0f8d1"
+
+# ehandelkonsult.se
 [[routes]]
 pattern = "ehandelkonsult.se/*"
 zone_id = "ddd93aa784cad9ec2d9afe50f128206e"
@@ -67,7 +84,16 @@ zone_id = "ddd93aa784cad9ec2d9afe50f128206e"
 pattern = "www.ehandelkonsult.se/*"
 zone_id = "ddd93aa784cad9ec2d9afe50f128206e"
 
-# klaviyo.se — zone: 7c7280fbb2fc66baee09c6e1e7156034
+# inline-ehandel.se
+[[routes]]
+pattern = "inline-ehandel.se/*"
+zone_id = "e236e2fa0e83ee6ebd26cc33e7eaf151"
+
+[[routes]]
+pattern = "www.inline-ehandel.se/*"
+zone_id = "e236e2fa0e83ee6ebd26cc33e7eaf151"
+
+# klaviyo.se
 [[routes]]
 pattern = "klaviyo.se/*"
 zone_id = "7c7280fbb2fc66baee09c6e1e7156034"
@@ -76,7 +102,79 @@ zone_id = "7c7280fbb2fc66baee09c6e1e7156034"
 pattern = "www.klaviyo.se/*"
 zone_id = "7c7280fbb2fc66baee09c6e1e7156034"
 
-# punchout.nu — zone: 84f92a5b96a6f1595dabbed85bdca0cb
+# magento-konsulter.se
+[[routes]]
+pattern = "magento-konsulter.se/*"
+zone_id = "d655ff791416deecc9ed8abd4512f39a"
+
+[[routes]]
+pattern = "www.magento-konsulter.se/*"
+zone_id = "d655ff791416deecc9ed8abd4512f39a"
+
+# magento-pwa.se
+[[routes]]
+pattern = "magento-pwa.se/*"
+zone_id = "a3b76adba0158c72fd22fa2f340ac55a"
+
+[[routes]]
+pattern = "www.magento-pwa.se/*"
+zone_id = "a3b76adba0158c72fd22fa2f340ac55a"
+
+# magento-sverige.se
+[[routes]]
+pattern = "magento-sverige.se/*"
+zone_id = "817ffe42ce13e7ce609e55b3e2cd521d"
+
+[[routes]]
+pattern = "www.magento-sverige.se/*"
+zone_id = "817ffe42ce13e7ce609e55b3e2cd521d"
+
+# magento-webshop.se
+[[routes]]
+pattern = "magento-webshop.se/*"
+zone_id = "1be59bf0bf57794477eb51a44deba8b6"
+
+[[routes]]
+pattern = "www.magento-webshop.se/*"
+zone_id = "1be59bf0bf57794477eb51a44deba8b6"
+
+# magentocommerce.se
+[[routes]]
+pattern = "magentocommerce.se/*"
+zone_id = "8498775ab2ea3d11ac71aa43adc9427a"
+
+[[routes]]
+pattern = "www.magentocommerce.se/*"
+zone_id = "8498775ab2ea3d11ac71aa43adc9427a"
+
+# magentoexperten.se
+[[routes]]
+pattern = "magentoexperten.se/*"
+zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
+
+[[routes]]
+pattern = "www.magentoexperten.se/*"
+zone_id = "36232f0ebc1401a0ed138ac4bd84ba3a"
+
+# orionheadless.com
+[[routes]]
+pattern = "orionheadless.com/*"
+zone_id = "faee85347b30ced855e757eafcdebbb5"
+
+[[routes]]
+pattern = "www.orionheadless.com/*"
+zone_id = "faee85347b30ced855e757eafcdebbb5"
+
+# pimsystem.se
+[[routes]]
+pattern = "pimsystem.se/*"
+zone_id = "62169dc6270039ad16290bbc10006a50"
+
+[[routes]]
+pattern = "www.pimsystem.se/*"
+zone_id = "62169dc6270039ad16290bbc10006a50"
+
+# punchout.nu
 [[routes]]
 pattern = "punchout.nu/*"
 zone_id = "84f92a5b96a6f1595dabbed85bdca0cb"
@@ -84,3 +182,75 @@ zone_id = "84f92a5b96a6f1595dabbed85bdca0cb"
 [[routes]]
 pattern = "www.punchout.nu/*"
 zone_id = "84f92a5b96a6f1595dabbed85bdca0cb"
+
+# shopifyb2b.se
+[[routes]]
+pattern = "shopifyb2b.se/*"
+zone_id = "a0efcb54b8a155e77d5a12cb879780ed"
+
+[[routes]]
+pattern = "www.shopifyb2b.se/*"
+zone_id = "a0efcb54b8a155e77d5a12cb879780ed"
+
+# shopifybyrå.se
+[[routes]]
+pattern = "xn--shopifybyr-b6a.se/*"
+zone_id = "cacd850151721cdda3279e32a1b7da4f"
+
+[[routes]]
+pattern = "www.xn--shopifybyr-b6a.se/*"
+zone_id = "cacd850151721cdda3279e32a1b7da4f"
+
+# shopifyexperter.se
+[[routes]]
+pattern = "shopifyexperter.se/*"
+zone_id = "c30a05b75f75948012471d3f77e2bb13"
+
+[[routes]]
+pattern = "www.shopifyexperter.se/*"
+zone_id = "c30a05b75f75948012471d3f77e2bb13"
+
+# shopifyexperts.se
+[[routes]]
+pattern = "shopifyexperts.se/*"
+zone_id = "1e9aa4a57717a1885de704a7933c181e"
+
+[[routes]]
+pattern = "www.shopifyexperts.se/*"
+zone_id = "1e9aa4a57717a1885de704a7933c181e"
+
+# shopifykonsulter.se
+[[routes]]
+pattern = "shopifykonsulter.se/*"
+zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
+
+[[routes]]
+pattern = "www.shopifykonsulter.se/*"
+zone_id = "cf2832fba69ab9d801a0cfcfa75839d2"
+
+# shopifypro.se
+[[routes]]
+pattern = "shopifypro.se/*"
+zone_id = "d2d694fffb863c506f8262a8ce3301aa"
+
+[[routes]]
+pattern = "www.shopifypro.se/*"
+zone_id = "d2d694fffb863c506f8262a8ce3301aa"
+
+# wunderwerk-b2b.com
+[[routes]]
+pattern = "wunderwerk-b2b.com/*"
+zone_id = "0ee15fc35648feb2d10fe135b362af0d"
+
+[[routes]]
+pattern = "www.wunderwerk-b2b.com/*"
+zone_id = "0ee15fc35648feb2d10fe135b362af0d"
+
+# x-konsult.se
+[[routes]]
+pattern = "x-konsult.se/*"
+zone_id = "9d469c769f961b7553ea8bde3139754b"
+
+[[routes]]
+pattern = "www.x-konsult.se/*"
+zone_id = "9d469c769f961b7553ea8bde3139754b"

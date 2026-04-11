@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adobe Commerce Sverige | Implementering, support & vidareutveckling</title>
+<meta name="description" content="Adobe Commerce (Magento) i Sverige — certifierad partner för implementering, support och vidareutveckling. B2B Commerce, Adobe Commerce Cloud och komplex e-handelsutveckling.">
+<link rel="canonical" href="https://adobe-commerce.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Adobe Commerce Sverige",
+  "description": "Certifierad Adobe Commerce-partner i Sverige. Implementering, support och vidareutveckling av Adobe Commerce och Magento för svenska enterprise-handlare.",
+  "url": "https://adobe-commerce.se/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Vad är Adobe Commerce och hur skiljer det sig från Magento?","acceptedAnswer": {"@type": "Answer","text": "Adobe Commerce är Adobes enterprise e-handelsplattform, byggd på Magento 2-grunden. 2018 köpte Adobe Magento och integrerade plattformen i Adobe Experience Cloud. Adobe Commerce inkluderar allt i Magento Open Source plus avancerade B2B-funktioner, Adobe Sensei AI-driven personalisering, Page Builder, Payment Services, staging och preview, kundlojalitetsprogram och tillgång till Adobe Commerce Cloud-hosting. Adobe Commerce är det nya varumärkesnamnet för vad som tidigare kallades Magento Commerce."}},
+    {"@type": "Question","name": "Hur mycket kostar Adobe Commerce i Sverige?","acceptedAnswer": {"@type": "Answer","text": "Adobe Commerce licenskostnad baseras på omsättning och kallas Gross Merchandise Value (GMV). För en butik med 50–100 MSEK omsättning kostar licensen typiskt 300 000–600 000 kr per år. Implementeringskostnaden tillkommer och ligger på 800 000–3 000 000 kr beroende på komplexitet. Adobe Commerce Cloud-hosting kostar ytterligare 200 000–500 000 kr per år. Total ägandeåterkostnad (TCO) för ett Adobe Commerce-projekt är typiskt 2–6 MSEK under de första tre åren."}},
+    {"@type": "Question","name": "Passar Adobe Commerce för B2B-handel?","acceptedAnswer": {"@type": "Answer","text": "Ja, Adobe Commerce B2B är marknadens starkaste B2B e-handelsfunktionalitet. Inkluderat: företagskonton med hierarkier, kundspecifika prislistor och kataloger, förhandsgodkänd kreditlimit och betalningsvillkor, offerthantering med förhandlingsflöde, snabborderläggning via ordernummer, inköpsordrar och godkännandeflöden, samt integration med kundspecifika ERP-priser och lagernivåer."}},
+    {"@type": "Question","name": "Vad ingår i Adobe Commerce Cloud?","acceptedAnswer": {"@type": "Answer","text": "Adobe Commerce Cloud är en managed hosting-lösning specifikt designad för Adobe Commerce. Den inkluderar: dedikerad cloud-infrastruktur (AWS eller Azure), auto-skalning vid trafikökningar, inbyggt CDN via Fastly, kundkonfigurerad caching via Varnish, staging-miljöer för säker driftsättning, Git-baserat deployment-flöde, 24/7 infrastrukturmonitorering och SLA på 99,9% drifttid."}},
+    {"@type": "Question","name": "Hur hanterar man uppgraderingar av Adobe Commerce?","acceptedAnswer": {"@type": "Answer","text": "Adobe Commerce-uppgraderingar kräver noggrann planering. Adobe följer ett schema med minor releases (2.4.x) ungefär var sjätte månad och security patches oftare. Uppgraderingsprocessen inkluderar: kloning av produktionsmiljö till staging, körning av uppgraderingskompatibilitetsverktyget, buggfixning av inkompatibla moduler, full testning och slutligen produktionsdriftsättning under ett underhållsfönster. Vi sköter detta inom våra förvaltningsavtal."}},
+    {"@type": "Question","name": "Hur väljer man rätt Adobe Commerce-partner i Sverige?","acceptedAnswer": {"@type": "Answer","text": "Leta efter partners med officiell Adobe Commerce Solution Partner-status (tidigare Magento Solution Partner). Kontrollera om de är Bronze, Silver, Gold eller Platinum-partner — nivån baseras på antal certifierade utvecklare och levererade projekt. Be om case studies specifikt från Adobe Commerce-projekt (inte enbart Magento Open Source) och fråga om erfarenhet av Adobe Commerce Cloud."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#e04a00;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#e04a00 0%,#a03200 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#e04a00;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#fff4f0;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#e04a00;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #f5ddd5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(224,74,0,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #f5ddd5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#e04a00}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#fff4f0;border:1px solid #f5b09a;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#e04a00}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .feature-list{list-style:none;margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+  .feature-list li{background:#fff4f0;border-radius:8px;padding:14px 18px;border-left:3px solid #e04a00;font-size:.95rem}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://adobe-commerce.se/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Adobe Commerce Sverige | Implementering, support & vidareutveckling" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="Adobe Commerce (Magento) i Sverige — certifierad partner för implementering, support och vidareutveckling. B2B Commerce, Adobe Commerce Cloud och komplex e-handelsutveckling." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adobe Commerce Sverige | Implementering, support & vidareutveckling" />
+  <meta name="twitter:description" content="Adobe Commerce (Magento) i Sverige — certifierad partner för implementering, support och vidareutveckling. B2B Commerce, Adobe Commerce Cloud och komplex e-handelsutveckling." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>Adobe Commerce Sverige</h1>
+    <p>Certifierad Adobe Commerce-partner för implementering, support och vidareutveckling. Vi hjälper svenska enterprise-handlare att utnyttja hela kraften i Adobe Commerce och Magento 2.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Boka Adobe Commerce-konsultation</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Adobe Commerce — Enterprise e-handel för ambitiösa handlare</h2>
+    <p class="lead">Adobe Commerce (tidigare Magento Commerce) är marknadens mest kompletta enterprise e-handelsplattform. Den erbjuder oöverträffad flexibilitet, kraftfulla B2B-funktioner och sömlös integration med Adobes ekosystem av marknadsförings- och analysverktyg.</p>
+    <p>Adobe Commerce är rätt val för handlare med komplexa krav: stora produktkataloger med variantlogik, B2B-kunder med kundspecifika priser och betalningsvillkor, internationell handel i flera valutor och språk, och behov av djupgående anpassning av köpflödet.</p>
+    <p style="margin-top:16px">Som certifierade Adobe Commerce-partners i Sverige har vi genomfört implementeringar, migreningar och vidareutvecklingsprojekt för svenska enterprise-handlare sedan plattformen var Magento 1. Vi vet vad som fungerar — och vad som inte fungerar.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">80+</div><div class="stat-label">Adobe Commerce-projekt</div></div>
+      <div><div class="stat-num">12 år</div><div class="stat-label">Magento/Adobe Commerce-expertis</div></div>
+      <div><div class="stat-num">25+</div><div class="stat-label">Certifierade Adobe Commerce-utvecklare</div></div>
+      <div><div class="stat-num">Gold</div><div class="stat-label">Adobe Solution Partner-nivå</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>Adobe Commerce B2B — Komplett B2B e-handelsfunktionalitet</h2>
+    <p class="lead">Adobe Commerce B2B är marknadens starkaste out-of-the-box B2B e-handelslösning. Dessa funktioner gör skillnaden för svenska B2B-handlare.</p>
+    <ul class="feature-list">
+      <li>Företagskonton med hierarkier och rollbaserad åtkomst</li>
+      <li>Kundspecifika prislistor och produktkataloger</li>
+      <li>Kreditlimiter och betalningsvillkor per kund</li>
+      <li>Offerthantering med förhandlingsflöde (Request for Quote)</li>
+      <li>Snabborderläggning via artikelnummer, CSV-import</li>
+      <li>Inköpsordrar och flerstegsgodkännandeflöden</li>
+      <li>Avtalade priser synkroniserade från ERP</li>
+      <li>Kundspecifik katalog med dolda artiklar</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Våra Adobe Commerce-tjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">🏗️</div><h3>Nyimplementering</h3><p>Komplett Adobe Commerce-implementation från arkitekturkrav till lansering. Vi konfigurerar katalogstruktur, prisnivåer, B2B-funktioner, betalningslösningar och fraktkonfiguration anpassat för din verksamhet.</p></div>
+      <div class="svc"><div class="svc-icon">🔄</div><h3>Migrering från Magento 1 eller äldre M2</h3><p>Säker migrering från Magento 1 (EOL sedan 2020) eller äldre Magento 2-versioner till senaste Adobe Commerce. Vi säkerställer att all data och anpassad funktionalitet porteras korrekt.</p></div>
+      <div class="svc"><div class="svc-icon">☁️</div><h3>Adobe Commerce Cloud</h3><p>Migrering till och drift av Adobe Commerce Cloud (ece-tools, Fastly CDN, Varnish, Elasticsearch). Vi konfigurerar CI/CD-pipelines och hanterar staging- och produktionsmiljöer.</p></div>
+      <div class="svc"><div class="svc-icon">🔗</div><h3>ERP och systemintegration</h3><p>Integration med SAP, Microsoft Dynamics 365, Visma, Monitor och Pyramid. Tvåvägssynkronisering av produkter, priser, lager, kunder och ordrar via REST API, GraphQL eller meddelandeköer.</p></div>
+      <div class="svc"><div class="svc-icon">🛠️</div><h3>Vidareutveckling och anpassning</h3><p>Modulutveckling, checkoutanpassning, custom attribut och affärslogik specifik för er verksamhet. Vi följer Magento coding standards och Best Practices för att säkerställa uppgraderingsbarhet.</p></div>
+      <div class="svc"><div class="svc-icon">🛡️</div><h3>Förvaltning och support</h3><p>Löpande förvaltning med säkerhetspatchar, prestandaövervakning och teknisk support. SLA-avtal med garanterad svarstid och dedikerad teknisk kontaktperson.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>Vanliga frågor om Adobe Commerce</h2>
+    <div class="faq">
+      <details>
+        <summary>Vad är Adobe Commerce och hur skiljer det sig från Magento?</summary>
+        <div class="faq-body">Adobe Commerce är Adobes enterprise e-handelsplattform, byggd på Magento 2-grunden. Adobe köpte Magento 2018 och integrerade det i Adobe Experience Cloud. Adobe Commerce inkluderar allt i Magento Open Source plus avancerade B2B-funktioner, AI-personalisering, Page Builder, staging och Payment Services.</div>
+      </details>
+      <details>
+        <summary>Hur mycket kostar Adobe Commerce i Sverige?</summary>
+        <div class="faq-body">Licenskostnaden baseras på omsättning. För 50–100 MSEK GMV kostar licensen 300 000–600 000 kr per år. Implementeringen kostar 800 000–3 000 000 kr. Adobe Commerce Cloud-hosting kostar 200 000–500 000 kr per år. Total TCO under tre år är typiskt 2–6 MSEK.</div>
+      </details>
+      <details>
+        <summary>Passar Adobe Commerce för B2B-handel?</summary>
+        <div class="faq-body">Ja, Adobe Commerce B2B är marknadens starkaste B2B e-handelsfunktionalitet med företagskonton, kundspecifika prislistor, offerthantering, snabborderläggning, inköpsordrar och godkännandeflöden.</div>
+      </details>
+      <details>
+        <summary>Vad ingår i Adobe Commerce Cloud?</summary>
+        <div class="faq-body">Adobe Commerce Cloud inkluderar dedikerad cloud-infrastruktur (AWS eller Azure), auto-skalning, inbyggt CDN via Fastly, Varnish-caching, staging-miljöer, Git-baserat deployment och 24/7 infrastrukturmonitorering med 99,9% SLA.</div>
+      </details>
+      <details>
+        <summary>Hur hanterar man uppgraderingar av Adobe Commerce?</summary>
+        <div class="faq-body">Uppgraderingar kräver noggrann planering: kloning av produktionsmiljö, körning av kompatibilitetsverktyget, buggfixning av inkompatibla moduler, full testning och produktionsdriftsättning under underhållsfönster. Vi sköter detta inom förvaltningsavtalen.</div>
+      </details>
+      <details>
+        <summary>Hur väljer man rätt Adobe Commerce-partner?</summary>
+        <div class="faq-body">Leta efter partners med officiell Adobe Commerce Solution Partner-status. Kontrollera om de är Bronze, Silver, Gold eller Platinum-partner baserat på certifierade utvecklare och levererade projekt. Be om case studies från Adobe Commerce-projekt och fråga om erfarenhet av Adobe Commerce Cloud.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">Gold Adobe Commerce Solution Partner</h2>
+    <p>Dahlquist är en av Sveriges mest erfarna Adobe Commerce-partners med certifierade Magento 2 Front End och Back End-utvecklare. Vi har levererat komplexa Adobe Commerce-projekt för swedish enterprise-handlare sedan 2012.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Adobe Commerce Gold Partner</span>
+      <span class="badge">Magento Certified</span>
+      <span class="badge">B2B Commerce</span>
+      <span class="badge">Adobe Commerce Cloud</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/adobe-commerce" style="color:#f5a07a">Läs mer om Adobe Commerce på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – Adobe Commerce Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

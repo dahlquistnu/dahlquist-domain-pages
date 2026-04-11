@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magento PWA Sverige | Headless Magento & PWA Studio — snabbare butiker</title>
+<meta name="description" content="Magento PWA (Progressive Web App) för svenska e-handlare. Headless Magento med PWA Studio, Vue Storefront och React. Sub-sekunders sidladdning och app-liknande upplevelse.">
+<link rel="canonical" href="https://magentopwa.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Magento PWA Sverige",
+  "description": "Magento PWA och headless Magento-lösningar för svenska e-handlare. PWA Studio, Vue Storefront och React-baserade storefront-lösningar.",
+  "url": "https://magentopwa.se/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Vad är en Magento PWA?","acceptedAnswer": {"@type": "Answer","text": "En Magento PWA (Progressive Web App) är en webbaserad applikation som kombinerar Magentos kraftfulla e-handelsbakend med en modern JavaScript-frontend (React eller Vue). Resultatet är en snabb, app-liknande shoppingupplevelse som kan installeras på hemskärmen, fungerar offline och erbjuder push-notiser. PWA-arkitekturen separerar frontend (storefront) från Magento-backend via GraphQL API — det som kallas headless commerce."}},
+    {"@type": "Question","name": "Vilka PWA-lösningar finns för Magento?","acceptedAnswer": {"@type": "Answer","text": "De tre vanligaste Magento PWA-lösningarna är: 1) Magento PWA Studio (officiell, React-baserad, underhålls av Adobe), 2) Vue Storefront 2 (populär open source, Vue.js-baserad, stark community), 3) ScandiPWA (React-baserad, lättare att anpassa). För Adobe Commerce Cloud-projekt är PWA Studio det naturliga valet. Vue Storefront är starkast för projekt med befintlig Vue-kompetens och behov av snabb vidareutveckling."}},
+    {"@type": "Question","name": "Hur mycket snabbare är en Magento PWA jämfört med ett vanligt Magento-tema?","acceptedAnswer": {"@type": "Answer","text": "En välimplementerad Magento PWA är typiskt 3–5 gånger snabbare än ett traditionellt Magento-tema. Kategori- och produktsidor laddar på 0,3–0,8 sekunder (LCP) jämfört med 2–4 sekunder för ett konventionellt tema. Huvudorsaken är att PWA-arkitekturen laddar ett JavaScript-skal en gång och sedan hämtar innehåll via GraphQL API utan full sidladdning. Prestandaförbättringen leder typiskt till 15–25% förbättrad konverteringsgrad."}},
+    {"@type": "Question","name": "Vad kostar en Magento PWA-implementation?","acceptedAnswer": {"@type": "Answer","text": "En Magento PWA-implementation kostar typiskt 600 000–2 000 000 kr beroende på vald teknikstack, antal anpassningar och integrationer. PWA-projekt kräver React- eller Vue-kompetens utöver Magento-expertis, vilket ökar resurskostnaderna. Tidplanen är vanligen 6–12 månader. PWA-investeringen betalar sig via ökad konverteringsgrad, förbättrade Core Web Vitals och lägre bounce rate på mobil."}},
+    {"@type": "Question","name": "Behöver man byta Magento-backend för att ha en PWA?","acceptedAnswer": {"@type": "Answer","text": "Nej, Magento-backend (Magento 2 eller Adobe Commerce) behålls intakt vid en PWA-implementation. Det är enbart frontendet (temat) som byts ut mot en PWA-lösning. Magento-backend exponerar data via GraphQL API som PWA-frontendet konsumerar. Alla backend-funktioner, integrationer, betalningar och ordrarhantering fortsätter att fungera som vanligt."}},
+    {"@type": "Question","name": "Hur påverkar Magento PWA SEO?","acceptedAnswer": {"@type": "Answer","text": "Modern Magento PWA hanterar SEO väl via server-side rendering (SSR) eller static site generation (SSG), vilket säkerställer att Googles crawler kan indexera innehållet korrekt. Magento PWA Studio stöder SSR. Core Web Vitals-förbättringarna (LCP, CLS, FID/INP) som PWA levererar är positiva ranking-signaler i Google. Det är avgörande att konfigurera SSR korrekt — en felkonfigurerad PWA utan SSR kan ha sämre SEO än ett traditionellt tema."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#e04a00;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#e04a00 0%,#a03200 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#e04a00;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#fff4f0;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#e04a00;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #f5ddd5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(224,74,0,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #f5ddd5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#e04a00}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#fff4f0;border:1px solid #f5b09a;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#e04a00}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .comparison{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px}
+  .comp-card{border-radius:10px;padding:28px;border:2px solid #e04a00}
+  .comp-card h3{color:#e04a00}
+  .comp-card ul{list-style:none;margin-top:12px}
+  .comp-card li{padding:6px 0;border-bottom:1px solid #f5ddd5;font-size:.95rem}
+  .comp-card li:last-child{border:none}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://magentopwa.se/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Magento PWA Sverige | Headless Magento & PWA Studio — snabbare butiker" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="Magento PWA (Progressive Web App) för svenska e-handlare. Headless Magento med PWA Studio, Vue Storefront och React. Sub-sekunders sidladdning och app-liknande upplevelse." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Magento PWA Sverige | Headless Magento & PWA Studio — snabbare butiker" />
+  <meta name="twitter:description" content="Magento PWA (Progressive Web App) för svenska e-handlare. Headless Magento med PWA Studio, Vue Storefront och React. Sub-sekunders sidladdning och app-liknande upplevelse." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>Magento PWA — Headless Magento för moderna e-handlare</h1>
+    <p>Progressive Web App för Magento och Adobe Commerce. Sub-sekunders sidladdning, app-liknande upplevelse och förbättrad konverteringsgrad. PWA Studio, Vue Storefront och React-baserade storefront-lösningar.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Boka PWA-konsultation</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Varför Magento PWA är framtiden för ambitiösa e-handlare</h2>
+    <p class="lead">Traditionella Magento-teman bygger på PHP-renderat HTML och full sidladdning för varje navigering. PWA-arkitekturen löser detta med ett JavaScript-skal som laddas en gång och sedan navigerar blixtsnabbt via API-anrop.</p>
+    <p>Resultatet är en e-handel som känns som en native mobilapp — smidig navigering utan sidladdning, snabb sökning, offline-funktionalitet och möjlighet att installera butiken på hemskärmen. För svenska mobil-shoppare som förväntar sig Netflix-liknande smidigsmess är PWA ett kraftfullt konkurrensmedel.</p>
+    <p style="margin-top:16px">Prestandaförbättringarna är mätbara: LCP på under 1 sekund, 15–25% förbättrad mobilkonvertering och starka Core Web Vitals-poäng som gynnar Google-rankning. För butiker med 1 MSEK+ omsättning per månad är ROI-kalkylen tydlig.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">0.6s</div><div class="stat-label">Genomsnittlig LCP med PWA</div></div>
+      <div><div class="stat-num">22%</div><div class="stat-label">Ökad mobilkonvertering</div></div>
+      <div><div class="stat-num">5x</div><div class="stat-label">Snabbare än traditionellt Magento-tema</div></div>
+      <div><div class="stat-num">15+</div><div class="stat-label">PWA-projekt levererade</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>Magento PWA-alternativ jämfört</h2>
+    <div class="comparison">
+      <div class="comp-card">
+        <h3>Magento PWA Studio</h3>
+        <ul>
+          <li>Officiell Adobe-lösning</li>
+          <li>React-baserad (Peregrine/Venia)</li>
+          <li>Bäst för Adobe Commerce Cloud</li>
+          <li>Stark long-term support</li>
+          <li>GraphQL-first</li>
+        </ul>
+      </div>
+      <div class="comp-card" style="border-color:#aaa">
+        <h3 style="color:#333">Vue Storefront 2</h3>
+        <ul>
+          <li>Open source, stark community</li>
+          <li>Vue.js-baserad (Nuxt 3)</li>
+          <li>Stöder Magento, Shopify, Contentful</li>
+          <li>Snabbare vidareutveckling</li>
+          <li>Vist Storefront Cloud tillgänglig</li>
+        </ul>
+      </div>
+      <div class="comp-card" style="border-color:#aaa">
+        <h3 style="color:#333">ScandiPWA</h3>
+        <ul>
+          <li>React-baserad, lättviktig</li>
+          <li>Enklare att anpassa</li>
+          <li>Stöds av ScandiWeb</li>
+          <li>God prestanda out-of-box</li>
+          <li>Aktiv GitHub-community</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Våra Magento PWA-tjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">🏗️</div><h3>PWA-implementation</h3><p>Fullständig implementation av Magento PWA Studio, Vue Storefront eller ScandiPWA kopplat till din befintliga Magento-backend. Inkluderar GraphQL-konfiguration, SSR-setup och CDN-integration.</p></div>
+      <div class="svc"><div class="svc-icon">⚡</div><h3>Prestandaoptimering</h3><p>Optimering av Core Web Vitals: LCP under 1s, INP under 200ms och CLS nära noll. Vi profilerar JavaScript-bundle, optimerar API-anrop och konfigurerar edge-caching för maximal hastighet.</p></div>
+      <div class="svc"><div class="svc-icon">🎨</div><h3>Anpassad PWA-design</h3><p>Designanpassning av PWA-temat till din varumärkesidentitet. Komponentbibliotek, anpassade produktsidors layout och konverteringsoptimerade kategori- och checkoutsidor.</p></div>
+      <div class="svc"><div class="svc-icon">🔗</div><h3>GraphQL API-integration</h3><p>Magento GraphQL-konfiguration och anpassning. Vi lägger till anpassade GraphQL-resolvers för specialfunktioner som inte täcks av Magentos inbyggda GraphQL-schema.</p></div>
+      <div class="svc"><div class="svc-icon">🔍</div><h3>Headless sökning</h3><p>Integration av Elasticsearch eller Algolia i PWA-frontendet för blixtsnabb och semantisk produktsökning. Faceted search, autocomplete och sökanalys ingår.</p></div>
+      <div class="svc"><div class="svc-icon">🛡️</div><h3>PWA-förvaltning</h3><p>Löpande förvaltning av PWA-stacken: paketuppdateringar, prestandaövervakning, Core Web Vitals-optimering och feature-releases. Vi sköter den tekniska komplexiteten så att ditt team kan fokusera på affären.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff8f5">
+  <div class="container">
+    <h2>Vanliga frågor om Magento PWA</h2>
+    <div class="faq">
+      <details>
+        <summary>Vad är en Magento PWA?</summary>
+        <div class="faq-body">En Magento PWA är en webbaserad applikation som kombinerar Magentos kraftfulla e-handelsbakend med en modern JavaScript-frontend (React eller Vue). Resultatet är en snabb, app-liknande shoppingupplevelse. PWA-arkitekturen separerar frontend från backend via GraphQL API — det som kallas headless commerce.</div>
+      </details>
+      <details>
+        <summary>Vilka PWA-lösningar finns för Magento?</summary>
+        <div class="faq-body">De tre vanligaste är: 1) Magento PWA Studio (officiell, React-baserad), 2) Vue Storefront 2 (populär open source, Vue.js), 3) ScandiPWA (React-baserad, lättviktig). För Adobe Commerce Cloud är PWA Studio det naturliga valet. Vue Storefront är starkast med befintlig Vue-kompetens.</div>
+      </details>
+      <details>
+        <summary>Hur mycket snabbare är en Magento PWA?</summary>
+        <div class="faq-body">En välimplementerad Magento PWA är 3–5 gånger snabbare än ett traditionellt Magento-tema. Sidladdning sker på 0,3–0,8 sekunder LCP jämfört med 2–4 sekunder för ett konventionellt tema. Prestandaförbättringen leder typiskt till 15–25% förbättrad konverteringsgrad.</div>
+      </details>
+      <details>
+        <summary>Vad kostar en Magento PWA-implementation?</summary>
+        <div class="faq-body">En Magento PWA-implementation kostar typiskt 600 000–2 000 000 kr beroende på teknikstack och anpassningar. PWA-projekt kräver React- eller Vue-kompetens utöver Magento-expertis. Tidplanen är vanligen 6–12 månader.</div>
+      </details>
+      <details>
+        <summary>Behöver man byta Magento-backend för en PWA?</summary>
+        <div class="faq-body">Nej, Magento-backend behålls intakt. Det är enbart frontendet (temat) som byts ut mot en PWA-lösning. Magento exponerar data via GraphQL API som PWA-frontendet konsumerar. Alla backend-funktioner, integrationer och betalningar fortsätter att fungera.</div>
+      </details>
+      <details>
+        <summary>Hur påverkar Magento PWA SEO?</summary>
+        <div class="faq-body">Modern Magento PWA hanterar SEO väl via server-side rendering (SSR) som säkerställer att Googles crawler kan indexera innehållet. Core Web Vitals-förbättringarna som PWA levererar är positiva rankingsignaler. Det är avgörande att konfigurera SSR korrekt — en PWA utan SSR kan ha sämre SEO än ett traditionellt tema.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">Magento PWA-experter med bevisat track record</h2>
+    <p>Dahlquist har implementerat Magento PWA-lösningar sedan 2019. Vi har djup erfarenhet av PWA Studio, Vue Storefront och ScandiPWA och förstår hur man levererar headless Magento-projekt som faktiskt presterar i produktion.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">Magento PWA Studio</span>
+      <span class="badge">Vue Storefront</span>
+      <span class="badge">Headless Commerce</span>
+      <span class="badge">Core Web Vitals</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/magento-pwa" style="color:#f5a07a">Läs mer om Magento PWA på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – Magento PWA Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Utveckling Sverige | AI för e-handel och B2B — pragmatisk AI-implementation</title>
+<meta name="description" content="AI-utveckling för svenska e-handlare och B2B-företag. Datadriven AI-strategi, LLM-integration, AI-automation och intelligenta produktrekommendationer. Boka rådgivning.">
+<link rel="canonical" href="https://aiutveckling.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI Utveckling Sverige",
+  "description": "AI-utveckling och AI-strategi för svenska e-handlare och B2B-företag. Pragmatisk AI-implementation med mätbara affärsresultat.",
+  "url": "https://aiutveckling.com/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Vad menas med AI-utveckling för e-handel?","acceptedAnswer": {"@type": "Answer","text": "AI-utveckling för e-handel innebär att bygga och integrera AI-funktioner som förbättrar shoppingupplevelsen och effektiviserar verksamheten. Konkreta exempel: semantisk produktsökning som förstår kundens intention, personaliserade produktrekommendationer baserade på beteendedata, automatisk generering av produktbeskrivningar och SEO-texter, AI-driven kundservice via chatbot, dynamisk prissättning och smarta lagervarningar."}},
+    {"@type": "Question","name": "Hur börjar man med AI-implementation i sin e-handel?","acceptedAnswer": {"@type": "Answer","text": "Börja med en AI-audit av din nuvarande e-handel: identifiera de 3–5 processer som tar mest tid eller kostar mest. Välj ett use case med tydlig ROI och bygg ett proof of concept. Vanliga startpunkter för e-handel: AI-driven produktsökning (ökar konvertering med 10–30%), automatiserad produktbeskrivningsgenerering (sparar 70% av copywriting-tid) eller AI-chatbot för vanliga kundserviceärenden."}},
+    {"@type": "Question","name": "Vilka AI-use cases fungerar bäst för B2B-e-handel?","acceptedAnswer": {"@type": "Answer","text": "B2B-specifika AI-use cases med hög ROI: intelligent produktsökning i komplexa kataloger med tusentals artiklar (sparar säljartid), AI-driven offertgenerering baserat på kundhistorik och lager, automatiserat kundflöde med AI-prioritering av leads baserat på köpsignaler, AI-assisterad orderhantering och avvikelsedetektering, samt smart korsförsäljning baserad på branschspecifika köpmönster."}},
+    {"@type": "Question","name": "Hur lång tid tar det att implementera AI i en befintlig e-handelslösning?","acceptedAnswer": {"@type": "Answer","text": "Enklare AI-integrationer (t.ex. ChatGPT-driven produktbeskrivningsgenerering) kan implementeras på 2–4 veckor. En semantisk sökmotor med vektordatabas tar 4–8 veckor. Ett fullständigt AI-rekommendationssystem kräver 8–16 veckor inkl. datainsamling, modellträning och A/B-testning. Tidplanen påverkas starkt av datakvalitet och tillgänglighet — historisk köpdata är ofta den kritiska resursen."}},
+    {"@type": "Question","name": "Hur mäter man ROI på AI-investeringar?","acceptedAnswer": {"@type": "Answer","text": "ROI på AI mäts via specifika KPI:er per use case. För produktsökning: konverteringsgrad för sökresultat och sökabandonrate. För rekommendationer: genomsnittligt ordervärde och klickfrekvens på rekommenderade produkter. För AI-kundservice: deflection rate (ärenden lösta utan mänsklig agent) och kundnöjdhet (CSAT). Sätt baseline-mätningar INNAN AI-lansering för att möjliggöra meningsfull jämförelse."}},
+    {"@type": "Question","name": "Behöver man stora datamängder för att börja med AI?","acceptedAnswer": {"@type": "Answer","text": "Inte alltid. Moderna LLM:er (GPT-4, Claude) är förtränade och kan användas direkt för textgenerering, kundservice och dokumentanalys utan egna träningsdata. För personalisering och rekommendationer behöver du historisk köpdata — typiskt 6–12 månaders transaktionshistorik för meningsfulla mönster. Startups och nya butiker kan börja med content-baserade rekommendationer (produktattribut) tills köpdata ackumulerats."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#6c3fc5;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#6c3fc5 0%,#4a2a8a 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#6c3fc5;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#f5f0ff;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#6c3fc5;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #e0d5f5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(108,63,197,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #e0d5f5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#6c3fc5}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#f5f0ff;border:1px solid #c5aef0;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#6c3fc5}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .use-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px}
+  .use-case{background:#f5f0ff;border-radius:10px;padding:24px;border-left:4px solid #6c3fc5}
+  .use-case-roi{font-size:.85rem;color:#6c3fc5;font-weight:700;margin-top:8px}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://aiutveckling.com/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="AI Utveckling Sverige | AI för e-handel och B2B — pragmatisk AI-implementation" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="AI-utveckling för svenska e-handlare och B2B-företag. Datadriven AI-strategi, LLM-integration, AI-automation och intelligenta produktrekommendationer. Boka rådgivning." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Utveckling Sverige | AI för e-handel och B2B — pragmatisk AI-implementation" />
+  <meta name="twitter:description" content="AI-utveckling för svenska e-handlare och B2B-företag. Datadriven AI-strategi, LLM-integration, AI-automation och intelligenta produktrekommendationer. Boka rådgivning." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>AI-utveckling för e-handel och B2B i Sverige</h1>
+    <p>Pragmatisk AI-implementation som skapar mätbara affärsresultat. Vi hjälper svenska e-handlare och B2B-företag att utnyttja AI — utan buzzwords och utan att slösa budget på teknologi som inte används.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Starta din AI-resa</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>AI-utveckling som faktiskt levererar värde</h2>
+    <p class="lead">Alltför många AI-projekt startar med teknologin och letar sedan efter problemet. Vi gör det omvända: vi börjar med dina affärsutmaningar och väljer sedan rätt AI-teknik för att lösa dem.</p>
+    <p>De vanligaste affärsproblemen vi löser med AI inom e-handel och B2B: kunder hittar inte rätt produkter i stora kataloger, kundservice kostar för mycket per ärende, produktbeskrivningar och SEO-texter tar för lång tid att producera, och det saknas insikt i köpmönster och kundlivstidsvärde.</p>
+    <p style="margin-top:16px">Vi levererar AI-lösningar med tydliga ROI-mål, mätbara baselines och en implementeringsplan som minimerar störning för din löpande verksamhet.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">30%</div><div class="stat-label">Ökad konvertering via AI-sökning</div></div>
+      <div><div class="stat-num">70%</div><div class="stat-label">Reducerad copywriting-tid</div></div>
+      <div><div class="stat-num">60%</div><div class="stat-label">AI-lösta kundserviceärenden</div></div>
+      <div><div class="stat-num">4v</div><div class="stat-label">Tid till första AI-leverans</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f5f0ff">
+  <div class="container">
+    <h2>AI-use cases med bevisad ROI</h2>
+    <p class="lead">Dessa sex AI-tillämpningar har dokumenterad affärspåverkan för svenska e-handlare och B2B-bolag.</p>
+    <div class="use-cases">
+      <div class="use-case"><h3>Semantisk produktsökning</h3><p>AI-sökning som förstår kundens intention, inte bara nyckelord. "Vandringsskor för regnigt väder" hittar rätt produkter även om de inte innehåller exakt de orden.</p><div class="use-case-roi">ROI: 10–30% ökad sökkonvertering</div></div>
+      <div class="use-case"><h3>Produktbeskrivningsgenerering</h3><p>Generera unika, SEO-optimerade produktbeskrivningar i bulk från produktattribut. Skalbart till 10 000+ produkter på dagar istället för månader.</p><div class="use-case-roi">ROI: 70% tidsbesparing i content-produktion</div></div>
+      <div class="use-case"><h3>AI-kundservice</h3><p>Intelligent chatbot som svarar på orderstatusfrågor, hantera returer och ger produktrådgivning dygnet runt — utan väntetid och utan mänsklig agent.</p><div class="use-case-roi">ROI: 50–70% deflection rate</div></div>
+      <div class="use-case"><h3>Personaliserade rekommendationer</h3><p>Rekommendationssystem baserat på köphistorik, beteendedata och liknande kunder. Ökar genomsnittligt ordervärde och kundlivstidsvärde.</p><div class="use-case-roi">ROI: 15–25% ökat genomsnittligt ordervärde</div></div>
+      <div class="use-case"><h3>B2B AI-offertgenerering</h3><p>AI-assisterad offert baserad på kundprofil, historiska köp, lager och marginalmål. Säljarens tid frigörs för komplexa förhandlingar.</p><div class="use-case-roi">ROI: 60% snabbare offerttid</div></div>
+      <div class="use-case"><h3>Prognos och lageroptimering</h3><p>ML-modeller för efterfrågeprognoser baserade på historiska data, säsongsvariation och externa faktorer. Minskar överlager och brist.</p><div class="use-case-roi">ROI: 20–35% lagerreduktion</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Våra AI-tjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">🎯</div><h3>AI-strategi och roadmap</h3><p>Vi kartlägger era processer, identifierar AI-möjligheter med högst ROI och sätter upp en 12-månaders AI-roadmap med konkreta milstolpar och budgetuppskattningar.</p></div>
+      <div class="svc"><div class="svc-icon">⚡</div><h3>Snabb AI-prototypning</h3><p>Proof of concept på 2–4 veckor. Vi bygger en fungerande demo av ert viktigaste AI-use case så ni kan validera värdet innan full implementation påbörjas.</p></div>
+      <div class="svc"><div class="svc-icon">🏗️</div><h3>AI-implementation och integration</h3><p>Full implementation av AI-lösningen i er produktionsmiljö med integration mot befintliga system (Shopify, Magento, ERP, CRM) och robust felhantering.</p></div>
+      <div class="svc"><div class="svc-icon">📊</div><h3>Datainfrastruktur för AI</h3><p>Datapipelines, datalager och feature stores som gör er data AI-redo. Utan ren, strukturerad data producerar AI-modeller opålitliga resultat.</p></div>
+      <div class="svc"><div class="svc-icon">🔄</div><h3>MLOps och AI-förvaltning</h3><p>Löpande förvaltning av AI-modeller: prestandaövervakning, omträning vid driftsförfall, kostnadsoptimering av API-anrop och dokumentation för GDPR-compliance.</p></div>
+      <div class="svc"><div class="svc-icon">🎓</div><h3>AI-utbildning och intern kompetens</h3><p>Vi utbildar er organisation i AI-grunderna, prompt engineering och verktyg för att ni ska kunna arbeta självständigt med AI-verktyg i er vardag.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f5f0ff">
+  <div class="container">
+    <h2>Vanliga frågor om AI-utveckling</h2>
+    <div class="faq">
+      <details>
+        <summary>Vad menas med AI-utveckling för e-handel?</summary>
+        <div class="faq-body">AI-utveckling för e-handel innebär att bygga och integrera AI-funktioner som förbättrar shoppingupplevelsen och effektiviserar verksamheten: semantisk produktsökning, personaliserade rekommendationer, automatisk produktbeskrivningsgenerering, AI-driven kundservice och dynamisk prissättning.</div>
+      </details>
+      <details>
+        <summary>Hur börjar man med AI-implementation i sin e-handel?</summary>
+        <div class="faq-body">Börja med en AI-audit: identifiera de 3–5 processer som tar mest tid eller kostar mest. Välj ett use case med tydlig ROI och bygg ett proof of concept. Vanliga startpunkter: AI-driven produktsökning (ökar konvertering med 10–30%) eller AI-chatbot för vanliga kundserviceärenden.</div>
+      </details>
+      <details>
+        <summary>Vilka AI-use cases fungerar bäst för B2B-e-handel?</summary>
+        <div class="faq-body">B2B-specifika AI-use cases med hög ROI: intelligent produktsökning i komplexa kataloger, AI-driven offertgenerering, automatiserat kundflöde med AI-prioritering av leads och smart korsförsäljning baserad på branschspecifika köpmönster.</div>
+      </details>
+      <details>
+        <summary>Hur lång tid tar det att implementera AI?</summary>
+        <div class="faq-body">Enklare AI-integrationer kan implementeras på 2–4 veckor. En semantisk sökmotor tar 4–8 veckor. Ett fullständigt AI-rekommendationssystem kräver 8–16 veckor inkl. datainsamling och A/B-testning. Datakvalitet och tillgänglighet är ofta den kritiska faktorn.</div>
+      </details>
+      <details>
+        <summary>Hur mäter man ROI på AI-investeringar?</summary>
+        <div class="faq-body">ROI mäts via specifika KPI:er per use case. För produktsökning: konverteringsgrad för sökresultat. För rekommendationer: genomsnittligt ordervärde. För AI-kundservice: deflection rate. Sätt baseline-mätningar INNAN AI-lansering för meningsfull jämförelse.</div>
+      </details>
+      <details>
+        <summary>Behöver man stora datamängder för att börja med AI?</summary>
+        <div class="faq-body">Inte alltid. Moderna LLM:er (GPT-4, Claude) är förtränade och kan användas direkt för textgenerering och kundservice utan egna träningsdata. För personalisering behöver du typiskt 6–12 månaders transaktionshistorik för meningsfulla mönster.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">AI-partner med djup e-handelsdomän-kunskap</h2>
+    <p>Dahlquist kombinerar AI-ingenjörskonst med 10+ års e-handelserfarenhet. Vi förstår inte bara hur man bygger AI — vi förstår också hur e-handel och B2B fungerar och kan designa AI-lösningar som faktiskt löser rätt problem.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">AI-strategi</span>
+      <span class="badge">LLM-integration</span>
+      <span class="badge">Rekommendationssystem</span>
+      <span class="badge">GDPR-kompatibel AI</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/ai" style="color:#c5aef0">Utforska AI-tjänster för e-handel på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – AI Utveckling Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>

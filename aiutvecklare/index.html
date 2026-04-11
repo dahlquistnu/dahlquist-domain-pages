@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Utvecklare Sverige | LLM-integration & AI-automation för företag</title>
+<meta name="description" content="Erfaren AI-utvecklare för svenska företag. LLM-integration, AI-automation, GPT-4 och Claude-implementationer, RAG-system och AI-drivna affärsprocesser. Boka konsultation idag.">
+<link rel="canonical" href="https://aiutvecklare.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI Utvecklare Sverige",
+  "description": "AI-utvecklare och AI-konsult för svenska företag. LLM-integration, AI-automation och AI-drivna affärsprocesser.",
+  "url": "https://aiutvecklare.com/",
+  "address": {"@type": "PostalAddress","addressCountry": "SE","addressRegion": "Stockholm"},
+  "sameAs": ["https://dahlquist.se"],
+  "priceRange": "$$$$",
+  "areaServed": "SE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Vad gör en AI-utvecklare?","acceptedAnswer": {"@type": "Answer","text": "En AI-utvecklare designar, bygger och driftsätter AI-drivna lösningar för företag. Det inkluderar integration av stora språkmodeller (LLM:er) som GPT-4, Claude och Llama, byggande av RAG-system (Retrieval-Augmented Generation) för dokumentintelligens, AI-agenter som kan utföra komplexa uppgifter autonomt, och AI-automation av affärsprocesser som kundservice, innehållsproduktion och dataanalys."}},
+    {"@type": "Question","name": "Hur integreras AI i en befintlig e-handelsplattform?","acceptedAnswer": {"@type": "Answer","text": "AI integreras i e-handel via API:er mot LLM-leverantörer (OpenAI, Anthropic, Google) eller via lokalt deployade modeller. Vanliga implementationer: AI-driven produktsökning med semantisk förståelse, personaliserade produktrekommendationer, AI-genererade produktbeskrivningar i bulk, chatbot för kundservice, smart prissättning och lageroptimering. Integrationerna byggs typiskt som mikrotjänster som kommunicerar med Shopify eller Magento via webhook eller API."}},
+    {"@type": "Question","name": "Vad är ett RAG-system och varför är det viktigt?","acceptedAnswer": {"@type": "Answer","text": "RAG (Retrieval-Augmented Generation) är en arkitektur där en AI-modell kombineras med ett sökbart kunskapsarkiv. Istället för att enbart svara baserat på träningsdata kan AI:n söka i din specifika dokumentation, produktkatalog eller kunskapsbas och ge exakta, uppdaterade svar. RAG är avgörande för företags-AI eftersom det gör AI-svar faktaförankrade och uppdaterbara utan att behöva träna om modellen."}},
+    {"@type": "Question","name": "Hur mycket kostar det att anlita en AI-utvecklare i Sverige?","acceptedAnswer": {"@type": "Answer","text": "En erfaren AI-utvecklare fakturerar 1 500–3 500 kr/timme i Sverige. Ett typiskt AI-projekt (LLM-integration med RAG och ett AI-agentflöde) kostar 200 000–600 000 kr. Löpande AI-förvaltning och modelloptimering kostar 20 000–80 000 kr per månad beroende på komplexitet. Kostnaden för API-anrop till OpenAI eller Anthropic tillkommer och varierar med användningsvolym."}},
+    {"@type": "Question","name": "Vilka AI-modeller passar bäst för svenska e-handlare?","acceptedAnswer": {"@type": "Answer","text": "GPT-4o (OpenAI) passar utmärkt för textgenerering, kundservice och produktbeskrivningar. Claude 3.5 Sonnet (Anthropic) är stark för analys, kodegeneration och långa dokument. Googles Gemini är bra för multimodala applikationer med bilder. För svenska texter fungerar alla dessa modeller väl. Om data-suveränitet är ett krav kan lokalt deployade modeller som Llama 3 eller Mistral vara ett alternativ."}},
+    {"@type": "Question","name": "Hur säkerställer man att AI-lösningar följer GDPR?","acceptedAnswer": {"@type": "Answer","text": "GDPR-compliance för AI kräver flera åtgärder: välj EU-baserade AI-leverantörer eller modeller med dataprocessoravtal (DPA) som uppfyller europeisk lag, minimera persondata som skickas till externa AI-API:er, implementera anonymisering och pseudonymisering av data i AI-pipelinen, dokumentera AI-beslut som påverkar individer, och se till att ditt AI-system kan förklara sina beslut (rätt till förklaring under GDPR artikel 22)."}}
+  ]
+}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+  a{color:#6c3fc5;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#6c3fc5 0%,#4a2a8a 100%);color:#fff;padding:80px 20px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.2}
+  .hero p{font-size:1.2rem;opacity:.9;max-width:680px;margin:0 auto 32px}
+  .btn{display:inline-block;background:#fff;color:#6c3fc5;padding:14px 32px;border-radius:6px;font-weight:700;font-size:1.05rem;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:64px 20px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;color:#0d1f3c}
+  h3{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:#0d1f3c}
+  .lead{font-size:1.1rem;color:#444;margin-bottom:40px;max-width:720px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;background:#f5f0ff;padding:48px 20px;border-radius:12px;text-align:center}
+  .stat-num{font-size:2.8rem;font-weight:800;color:#6c3fc5;line-height:1}
+  .stat-label{font-size:.9rem;color:#555;margin-top:4px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+  .svc{border:1px solid #e0d5f5;border-radius:10px;padding:28px;transition:box-shadow .2s}
+  .svc:hover{box-shadow:0 4px 20px rgba(108,63,197,.12)}
+  .svc-icon{font-size:2rem;margin-bottom:12px}
+  .faq{margin-top:32px}
+  .faq details{border:1px solid #e0d5f5;border-radius:8px;margin-bottom:12px;overflow:hidden}
+  .faq summary{padding:18px 20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-size:1.4rem;color:#6c3fc5}
+  details[open] summary::after{content:'−'}
+  .faq-body{padding:0 20px 18px;color:#444}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .badge{background:#f5f0ff;border:1px solid #c5aef0;border-radius:20px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#6c3fc5}
+  .eeat{background:#0d1f3c;color:#fff;padding:48px 20px;text-align:center}
+  .eeat p{opacity:.8;margin-top:8px}
+  .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:32px}
+  .tech-tag{background:#f5f0ff;border-radius:8px;padding:16px;text-align:center;font-weight:600;color:#6c3fc5;font-size:.9rem}
+  footer{background:#0d1f3c;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+</style>
+
+  <meta property="og:url" content="https://aiutvecklare.com/" />
+  <link rel="icon" href="https://dahlquist.se/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="AI Utvecklare Sverige | LLM-integration & AI-automation för företag" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Dahlquist E-handelskonsulter" />
+  <meta property="og:description" content="Erfaren AI-utvecklare för svenska företag. LLM-integration, AI-automation, GPT-4 och Claude-implementationer, RAG-system och AI-drivna affärsprocesser. Boka konsultation idag." />
+  <meta property="og:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Utvecklare Sverige | LLM-integration & AI-automation för företag" />
+  <meta name="twitter:description" content="Erfaren AI-utvecklare för svenska företag. LLM-integration, AI-automation, GPT-4 och Claude-implementationer, RAG-system och AI-drivna affärsprocesser. Boka konsultation idag." />
+  <meta name="twitter:image" content="https://dahlquist.se/images/og-dahlquist.jpg" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>AI-utvecklare för svenska företag</h1>
+    <p>LLM-integration, AI-automation och AI-agenter för e-handel och B2B. Vi transformerar affärsprocesser med GPT-4, Claude och öppen källkod AI — pragmatiskt, säkert och GDPR-kompatibelt.</p>
+    <a href="https://dahlquist.se/kontakt" class="btn">Boka AI-konsultation</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Varför AI-kompetens är avgörande för modern e-handel</h2>
+    <p class="lead">AI är inte längre en framtidsteknologi — det är en konkurrensfördel som mogna e-handlare redan utnyttjar. Från semantisk produktsökning till AI-genererade produkttexter och intelligent kundservice skapar AI mätbara affärsresultat.</p>
+    <p>Utmaningen är att de flesta företag saknar den specialkompetens som krävs för att implementera AI på ett robust sätt. Det räcker inte att anropa ett OpenAI-API — du behöver arkitektur som hanterar latens, kostnad, tillförlitlighet, hallucinationsrisker och GDPR.</p>
+    <p style="margin-top:16px">Vi är AI-utvecklare som förstår e-handel och B2B. Vi levererar AI-lösningar som faktiskt används och skapar värde — inte proof-of-concept som samlar damm.</p>
+    <div class="stats" style="margin-top:40px">
+      <div><div class="stat-num">40+</div><div class="stat-label">AI-projekt levererade</div></div>
+      <div><div class="stat-num">70%</div><div class="stat-label">Tidsbesparing i typiska processer</div></div>
+      <div><div class="stat-num">5</div><div class="stat-label">LLM-plattformar vi behärskar</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">GDPR-kompatibla lösningar</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f5f0ff">
+  <div class="container">
+    <h2>Våra AI-utvecklingstjänster</h2>
+    <div class="services">
+      <div class="svc"><div class="svc-icon">🤖</div><h3>LLM-integration</h3><p>Integration av GPT-4o, Claude 3.5, Gemini och öppen källkod-modeller (Llama, Mistral) i era befintliga system. Vi designar robusta integrationslager med fallback, caching och kostnadsoptimering.</p></div>
+      <div class="svc"><div class="svc-icon">📚</div><h3>RAG-system och dokumentintelligens</h3><p>Retrieval-Augmented Generation-system som gör er produktdokumentation, prislista och kundtjänsthistorik sökbar för AI. Kunder och säljare får exakta svar baserade på er faktiska data.</p></div>
+      <div class="svc"><div class="svc-icon">⚙️</div><h3>AI-agenter och automatisering</h3><p>AI-agenter som självständigt utför komplexa uppgifter: orderhantering, produktberikning, prisövervakning, marknadsanalys och kundsegmentering. Byggt med LangChain, AutoGen eller proprietära agent-ramverk.</p></div>
+      <div class="svc"><div class="svc-icon">💬</div><h3>AI-kundservice och chatbot</h3><p>Intelligenta kundserviceagenter som förstår context, hämtar orderinformation och löser ärenden utan mänsklig inblandning. Integration med Zendesk, Freshdesk och era befintliga supportkanaler.</p></div>
+      <div class="svc"><div class="svc-icon">🛒</div><h3>AI för e-handel</h3><p>Semantisk produktsökning, personaliserade rekommendationer, AI-genererade produktbeskrivningar i bulk och dynamisk prissättning. Implementerat direkt i Shopify, Magento eller din custom-plattform.</p></div>
+      <div class="svc"><div class="svc-icon">🔒</div><h3>GDPR-kompatibel AI</h3><p>AI-lösningar designade för europeisk dataskyddslagstiftning. EU-baserade AI-leverantörer, data-anonymisering i pipeline och dokumenterade dataprocessoravtal (DPA) med alla AI-underleverantörer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>AI-tekniker vi arbetar med</h2>
+    <p class="lead">Vi är modell-agnostiska och väljer rätt teknologi för varje use case.</p>
+    <div class="tech-grid">
+      <div class="tech-tag">OpenAI GPT-4o</div>
+      <div class="tech-tag">Anthropic Claude</div>
+      <div class="tech-tag">Google Gemini</div>
+      <div class="tech-tag">Llama 3 (Meta)</div>
+      <div class="tech-tag">Mistral AI</div>
+      <div class="tech-tag">LangChain</div>
+      <div class="tech-tag">LlamaIndex</div>
+      <div class="tech-tag">Pinecone</div>
+      <div class="tech-tag">Weaviate</div>
+      <div class="tech-tag">Qdrant</div>
+      <div class="tech-tag">Azure OpenAI</div>
+      <div class="tech-tag">AWS Bedrock</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f5f0ff">
+  <div class="container">
+    <h2>Vanliga frågor om AI-utveckling</h2>
+    <div class="faq">
+      <details>
+        <summary>Vad gör en AI-utvecklare?</summary>
+        <div class="faq-body">En AI-utvecklare designar, bygger och driftsätter AI-drivna lösningar för företag. Det inkluderar integration av stora språkmodeller (LLM:er) som GPT-4, Claude och Llama, byggande av RAG-system, AI-agenter som kan utföra komplexa uppgifter autonomt, och AI-automation av affärsprocesser.</div>
+      </details>
+      <details>
+        <summary>Hur integreras AI i en befintlig e-handelsplattform?</summary>
+        <div class="faq-body">AI integreras via API:er mot LLM-leverantörer (OpenAI, Anthropic, Google) eller lokalt deployade modeller. Vanliga implementationer: AI-driven produktsökning, personaliserade rekommendationer, AI-genererade produktbeskrivningar, chatbot för kundservice och smart prissättning.</div>
+      </details>
+      <details>
+        <summary>Vad är ett RAG-system och varför är det viktigt?</summary>
+        <div class="faq-body">RAG (Retrieval-Augmented Generation) kombinerar en AI-modell med ett sökbart kunskapsarkiv. AI:n kan söka i din specifika dokumentation, produktkatalog eller kunskapsbas och ge exakta, uppdaterade svar — utan att behöva tränas om modellen vid varje uppdatering.</div>
+      </details>
+      <details>
+        <summary>Hur mycket kostar en AI-utvecklare i Sverige?</summary>
+        <div class="faq-body">En erfaren AI-utvecklare fakturerar 1 500–3 500 kr/timme i Sverige. Ett typiskt AI-projekt kostar 200 000–600 000 kr. Löpande AI-förvaltning och modelloptimering kostar 20 000–80 000 kr per månad. API-kostnader till OpenAI eller Anthropic tillkommer baserat på användningsvolym.</div>
+      </details>
+      <details>
+        <summary>Vilka AI-modeller passar bäst för svenska e-handlare?</summary>
+        <div class="faq-body">GPT-4o passar utmärkt för textgenerering och kundservice. Claude 3.5 Sonnet är stark för analys och långa dokument. Googles Gemini passar multimodala applikationer. För data-suveränitet kan lokalt deployade Llama 3 eller Mistral vara alternativ.</div>
+      </details>
+      <details>
+        <summary>Hur säkerställer man att AI-lösningar följer GDPR?</summary>
+        <div class="faq-body">Välj EU-baserade AI-leverantörer eller modeller med DPA som uppfyller europeisk lag. Minimera persondata som skickas till externa AI-API:er, implementera anonymisering i AI-pipelinen, dokumentera AI-beslut och säkerställ rätten till förklaring under GDPR artikel 22.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="eeat">
+  <div class="container">
+    <h2 style="color:#fff">AI-kompetens med djup e-handelsförståelse</h2>
+    <p>Niklas Dahlquist och teamet på Dahlquist kombinerar AI-ingenjörskonst med 10+ års e-handelserfarenhet. Vi levererar AI-lösningar som skapar mätbara affärsresultat — inte teknologi för teknikens skull.</p>
+    <div class="badges" style="justify-content:center;margin-top:20px">
+      <span class="badge">LLM-integration</span>
+      <span class="badge">RAG-system</span>
+      <span class="badge">AI-agenter</span>
+      <span class="badge">GDPR AI</span>
+    </div>
+    <p style="margin-top:24px"><a href="https://dahlquist.se/ai-utveckling" style="color:#c5aef0">Läs mer om AI-tjänster på dahlquist.se →</a></p>
+  </div>
+</div>
+
+<footer><p>&copy; 2026 Dahlquist – AI Utvecklare Sverige | <a href="https://dahlquist.se" style="color:rgba(255,255,255,.6)">dahlquist.se</a></p></footer>
+</body>
+</html>
